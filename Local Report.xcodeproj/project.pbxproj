@@ -1,0 +1,283 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F9C7781315C71FFD0017E63A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C7781215C71FFC0017E63A /* UIKit.framework */; };
+		F9C7781515C71FFD0017E63A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C7781415C71FFD0017E63A /* Foundation.framework */; };
+		F9C7781715C71FFD0017E63A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C7781615C71FFD0017E63A /* CoreGraphics.framework */; };
+		F9C7781D15C71FFD0017E63A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F9C7781B15C71FFD0017E63A /* InfoPlist.strings */; };
+		F9C7781F15C71FFD0017E63A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C7781E15C71FFD0017E63A /* main.m */; };
+		F9C7782315C71FFD0017E63A /* LocalReportAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C7782215C71FFD0017E63A /* LocalReportAppDelegate.m */; };
+		F9C7782615C71FFD0017E63A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9C7782415C71FFD0017E63A /* MainStoryboard.storyboard */; };
+		F9C7782915C71FFD0017E63A /* LocalReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C7782815C71FFD0017E63A /* LocalReportViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F9C7780E15C71FFC0017E63A /* Local Report.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Local Report.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9C7781215C71FFC0017E63A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F9C7781415C71FFD0017E63A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F9C7781615C71FFD0017E63A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F9C7781A15C71FFD0017E63A /* Local Report-Info.plist */ = {isa = PBXFileReference; path = "Local Report-Info.plist"; sourceTree = "<group>"; };
+		F9C7781C15C71FFD0017E63A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F9C7781E15C71FFD0017E63A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F9C7782015C71FFD0017E63A /* Local Report-Prefix.pch */ = {isa = PBXFileReference; path = "Local Report-Prefix.pch"; sourceTree = "<group>"; };
+		F9C7782115C71FFD0017E63A /* LocalReportAppDelegate.h */ = {isa = PBXFileReference; path = LocalReportAppDelegate.h; sourceTree = "<group>"; };
+		F9C7782215C71FFD0017E63A /* LocalReportAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalReportAppDelegate.m; sourceTree = "<group>"; };
+		F9C7782515C71FFD0017E63A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		F9C7782715C71FFD0017E63A /* LocalReportViewController.h */ = {isa = PBXFileReference; path = LocalReportViewController.h; sourceTree = "<group>"; };
+		F9C7782815C71FFD0017E63A /* LocalReportViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalReportViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F9C7780B15C71FFC0017E63A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9C7781315C71FFD0017E63A /* UIKit.framework in Frameworks */,
+				F9C7781515C71FFD0017E63A /* Foundation.framework in Frameworks */,
+				F9C7781715C71FFD0017E63A /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F9C7780315C71FFC0017E63A = {
+			isa = PBXGroup;
+			children = (
+				F9C7781815C71FFD0017E63A /* Local Report */,
+				F9C7781115C71FFC0017E63A /* Frameworks */,
+				F9C7780F15C71FFC0017E63A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F9C7780F15C71FFC0017E63A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F9C7780E15C71FFC0017E63A /* Local Report.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F9C7781115C71FFC0017E63A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9C7781215C71FFC0017E63A /* UIKit.framework */,
+				F9C7781415C71FFD0017E63A /* Foundation.framework */,
+				F9C7781615C71FFD0017E63A /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F9C7781815C71FFD0017E63A /* Local Report */ = {
+			isa = PBXGroup;
+			children = (
+				F9C7782115C71FFD0017E63A /* LocalReportAppDelegate.h */,
+				F9C7782215C71FFD0017E63A /* LocalReportAppDelegate.m */,
+				F9C7782415C71FFD0017E63A /* MainStoryboard.storyboard */,
+				F9C7782715C71FFD0017E63A /* LocalReportViewController.h */,
+				F9C7782815C71FFD0017E63A /* LocalReportViewController.m */,
+				F9C7781915C71FFD0017E63A /* Supporting Files */,
+			);
+			path = "Local Report";
+			sourceTree = "<group>";
+		};
+		F9C7781915C71FFD0017E63A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F9C7781A15C71FFD0017E63A /* Local Report-Info.plist */,
+				F9C7781B15C71FFD0017E63A /* InfoPlist.strings */,
+				F9C7781E15C71FFD0017E63A /* main.m */,
+				F9C7782015C71FFD0017E63A /* Local Report-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F9C7780D15C71FFC0017E63A /* Local Report */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9C7782C15C71FFD0017E63A /* Build configuration list for PBXNativeTarget "Local Report" */;
+			buildPhases = (
+				F9C7780A15C71FFC0017E63A /* Sources */,
+				F9C7780B15C71FFC0017E63A /* Frameworks */,
+				F9C7780C15C71FFC0017E63A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Local Report";
+			productName = "Local Report";
+			productReference = F9C7780E15C71FFC0017E63A /* Local Report.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F9C7780515C71FFC0017E63A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LocalReport;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Stanford University - Vice Provost for Undergraduate Education";
+			};
+			buildConfigurationList = F9C7780815C71FFC0017E63A /* Build configuration list for PBXProject "Local Report" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F9C7780315C71FFC0017E63A;
+			productRefGroup = F9C7780F15C71FFC0017E63A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F9C7780D15C71FFC0017E63A /* Local Report */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F9C7780C15C71FFC0017E63A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9C7781D15C71FFD0017E63A /* InfoPlist.strings in Resources */,
+				F9C7782615C71FFD0017E63A /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F9C7780A15C71FFC0017E63A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9C7781F15C71FFD0017E63A /* main.m in Sources */,
+				F9C7782315C71FFD0017E63A /* LocalReportAppDelegate.m in Sources */,
+				F9C7782915C71FFD0017E63A /* LocalReportViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F9C7781B15C71FFD0017E63A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9C7781C15C71FFD0017E63A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F9C7782415C71FFD0017E63A /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9C7782515C71FFD0017E63A /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F9C7782A15C71FFD0017E63A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F9C7782B15C71FFD0017E63A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F9C7782D15C71FFD0017E63A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Local Report/Local Report-Prefix.pch";
+				INFOPLIST_FILE = "Local Report/Local Report-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F9C7782E15C71FFD0017E63A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Local Report/Local Report-Prefix.pch";
+				INFOPLIST_FILE = "Local Report/Local Report-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F9C7780815C71FFC0017E63A /* Build configuration list for PBXProject "Local Report" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9C7782A15C71FFD0017E63A /* Debug */,
+				F9C7782B15C71FFD0017E63A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9C7782C15C71FFD0017E63A /* Build configuration list for PBXNativeTarget "Local Report" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9C7782D15C71FFD0017E63A /* Debug */,
+				F9C7782E15C71FFD0017E63A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F9C7780515C71FFC0017E63A /* Project object */;
+}
