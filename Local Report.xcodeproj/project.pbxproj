@@ -7,30 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F920223315C7402E002F6721 /* VideoUploaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F920223215C7402E002F6721 /* VideoUploaderViewController.m */; };
+		F920223615C74201002F6721 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F920223515C74201002F6721 /* Storyboard.storyboard */; };
 		F9C7781315C71FFD0017E63A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C7781215C71FFC0017E63A /* UIKit.framework */; };
 		F9C7781515C71FFD0017E63A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C7781415C71FFD0017E63A /* Foundation.framework */; };
 		F9C7781715C71FFD0017E63A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C7781615C71FFD0017E63A /* CoreGraphics.framework */; };
 		F9C7781D15C71FFD0017E63A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F9C7781B15C71FFD0017E63A /* InfoPlist.strings */; };
 		F9C7781F15C71FFD0017E63A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C7781E15C71FFD0017E63A /* main.m */; };
 		F9C7782315C71FFD0017E63A /* LocalReportAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C7782215C71FFD0017E63A /* LocalReportAppDelegate.m */; };
-		F9C7782615C71FFD0017E63A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9C7782415C71FFD0017E63A /* MainStoryboard.storyboard */; };
-		F9C7782915C71FFD0017E63A /* LocalReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C7782815C71FFD0017E63A /* LocalReportViewController.m */; };
+		F9C7783115C7203F0017E63A /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C7783015C7203F0017E63A /* MainMenuViewController.m */; };
+		F9C7783715C72D2A0017E63A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C7783615C72D2A0017E63A /* QuartzCore.framework */; };
+		F9C7783C15C730900017E63A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C7783B15C730900017E63A /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F920223115C7402E002F6721 /* VideoUploaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoUploaderViewController.h; sourceTree = "<group>"; };
+		F920223215C7402E002F6721 /* VideoUploaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoUploaderViewController.m; sourceTree = "<group>"; };
+		F920223515C74201002F6721 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		F9C7780E15C71FFC0017E63A /* Local Report.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Local Report.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9C7781215C71FFC0017E63A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F9C7781415C71FFD0017E63A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F9C7781615C71FFD0017E63A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		F9C7781A15C71FFD0017E63A /* Local Report-Info.plist */ = {isa = PBXFileReference; path = "Local Report-Info.plist"; sourceTree = "<group>"; };
+		F9C7781A15C71FFD0017E63A /* Local Report-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Local Report-Info.plist"; sourceTree = "<group>"; };
 		F9C7781C15C71FFD0017E63A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F9C7781E15C71FFD0017E63A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F9C7782015C71FFD0017E63A /* Local Report-Prefix.pch */ = {isa = PBXFileReference; path = "Local Report-Prefix.pch"; sourceTree = "<group>"; };
-		F9C7782115C71FFD0017E63A /* LocalReportAppDelegate.h */ = {isa = PBXFileReference; path = LocalReportAppDelegate.h; sourceTree = "<group>"; };
+		F9C7782015C71FFD0017E63A /* Local Report-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Local Report-Prefix.pch"; sourceTree = "<group>"; };
+		F9C7782115C71FFD0017E63A /* LocalReportAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalReportAppDelegate.h; sourceTree = "<group>"; };
 		F9C7782215C71FFD0017E63A /* LocalReportAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalReportAppDelegate.m; sourceTree = "<group>"; };
-		F9C7782515C71FFD0017E63A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		F9C7782715C71FFD0017E63A /* LocalReportViewController.h */ = {isa = PBXFileReference; path = LocalReportViewController.h; sourceTree = "<group>"; };
-		F9C7782815C71FFD0017E63A /* LocalReportViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalReportViewController.m; sourceTree = "<group>"; };
+		F9C7782F15C7203F0017E63A /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
+		F9C7783015C7203F0017E63A /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
+		F9C7783615C72D2A0017E63A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F9C7783B15C730900017E63A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9C7783C15C730900017E63A /* MobileCoreServices.framework in Frameworks */,
+				F9C7783715C72D2A0017E63A /* QuartzCore.framework in Frameworks */,
 				F9C7781315C71FFD0017E63A /* UIKit.framework in Frameworks */,
 				F9C7781515C71FFD0017E63A /* Foundation.framework in Frameworks */,
 				F9C7781715C71FFD0017E63A /* CoreGraphics.framework in Frameworks */,
@@ -67,6 +76,8 @@
 		F9C7781115C71FFC0017E63A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F9C7783B15C730900017E63A /* MobileCoreServices.framework */,
+				F9C7783615C72D2A0017E63A /* QuartzCore.framework */,
 				F9C7781215C71FFC0017E63A /* UIKit.framework */,
 				F9C7781415C71FFD0017E63A /* Foundation.framework */,
 				F9C7781615C71FFD0017E63A /* CoreGraphics.framework */,
@@ -77,11 +88,11 @@
 		F9C7781815C71FFD0017E63A /* Local Report */ = {
 			isa = PBXGroup;
 			children = (
-				F9C7782115C71FFD0017E63A /* LocalReportAppDelegate.h */,
-				F9C7782215C71FFD0017E63A /* LocalReportAppDelegate.m */,
-				F9C7782415C71FFD0017E63A /* MainStoryboard.storyboard */,
-				F9C7782715C71FFD0017E63A /* LocalReportViewController.h */,
-				F9C7782815C71FFD0017E63A /* LocalReportViewController.m */,
+				F920223515C74201002F6721 /* Storyboard.storyboard */,
+				F920223115C7402E002F6721 /* VideoUploaderViewController.h */,
+				F920223215C7402E002F6721 /* VideoUploaderViewController.m */,
+				F9C7782F15C7203F0017E63A /* MainMenuViewController.h */,
+				F9C7783015C7203F0017E63A /* MainMenuViewController.m */,
 				F9C7781915C71FFD0017E63A /* Supporting Files */,
 			);
 			path = "Local Report";
@@ -90,6 +101,8 @@
 		F9C7781915C71FFD0017E63A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F9C7782115C71FFD0017E63A /* LocalReportAppDelegate.h */,
+				F9C7782215C71FFD0017E63A /* LocalReportAppDelegate.m */,
 				F9C7781A15C71FFD0017E63A /* Local Report-Info.plist */,
 				F9C7781B15C71FFD0017E63A /* InfoPlist.strings */,
 				F9C7781E15C71FFD0017E63A /* main.m */,
@@ -151,7 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9C7781D15C71FFD0017E63A /* InfoPlist.strings in Resources */,
-				F9C7782615C71FFD0017E63A /* MainStoryboard.storyboard in Resources */,
+				F920223615C74201002F6721 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,7 +177,8 @@
 			files = (
 				F9C7781F15C71FFD0017E63A /* main.m in Sources */,
 				F9C7782315C71FFD0017E63A /* LocalReportAppDelegate.m in Sources */,
-				F9C7782915C71FFD0017E63A /* LocalReportViewController.m in Sources */,
+				F9C7783115C7203F0017E63A /* MainMenuViewController.m in Sources */,
+				F920223315C7402E002F6721 /* VideoUploaderViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,14 +191,6 @@
 				F9C7781C15C71FFD0017E63A /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		F9C7782415C71FFD0017E63A /* MainStoryboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F9C7782515C71FFD0017E63A /* en */,
-			);
-			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -276,6 +282,7 @@
 				F9C7782E15C71FFD0017E63A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
