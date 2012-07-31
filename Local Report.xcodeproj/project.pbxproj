@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		F920223315C7402E002F6721 /* VideoUploaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F920223215C7402E002F6721 /* VideoUploaderViewController.m */; };
 		F920223615C74201002F6721 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F920223515C74201002F6721 /* Storyboard.storyboard */; };
+		F99690F915C8745F0027529B /* AudioCallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F99690F815C8745F0027529B /* AudioCallViewController.m */; };
+		F99690FD15C874810027529B /* AudioCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F99690FC15C874810027529B /* AudioCaptureViewController.m */; };
+		F996910015C874A70027529B /* AudioUploaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F99690FF15C874A70027529B /* AudioUploaderViewController.m */; };
 		F9C7781315C71FFD0017E63A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C7781215C71FFC0017E63A /* UIKit.framework */; };
 		F9C7781515C71FFD0017E63A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C7781415C71FFD0017E63A /* Foundation.framework */; };
 		F9C7781715C71FFD0017E63A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C7781615C71FFD0017E63A /* CoreGraphics.framework */; };
@@ -24,6 +27,12 @@
 		F920223115C7402E002F6721 /* VideoUploaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoUploaderViewController.h; sourceTree = "<group>"; };
 		F920223215C7402E002F6721 /* VideoUploaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoUploaderViewController.m; sourceTree = "<group>"; };
 		F920223515C74201002F6721 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		F99690F715C8745F0027529B /* AudioCallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioCallViewController.h; sourceTree = "<group>"; };
+		F99690F815C8745F0027529B /* AudioCallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioCallViewController.m; sourceTree = "<group>"; };
+		F99690FB15C874810027529B /* AudioCaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioCaptureViewController.h; sourceTree = "<group>"; };
+		F99690FC15C874810027529B /* AudioCaptureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioCaptureViewController.m; sourceTree = "<group>"; };
+		F99690FE15C874A70027529B /* AudioUploaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioUploaderViewController.h; sourceTree = "<group>"; };
+		F99690FF15C874A70027529B /* AudioUploaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioUploaderViewController.m; sourceTree = "<group>"; };
 		F9C7780E15C71FFC0017E63A /* Local Report.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Local Report.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9C7781215C71FFC0017E63A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F9C7781415C71FFD0017E63A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -89,6 +98,12 @@
 			isa = PBXGroup;
 			children = (
 				F920223515C74201002F6721 /* Storyboard.storyboard */,
+				F99690FE15C874A70027529B /* AudioUploaderViewController.h */,
+				F99690FF15C874A70027529B /* AudioUploaderViewController.m */,
+				F99690FB15C874810027529B /* AudioCaptureViewController.h */,
+				F99690FC15C874810027529B /* AudioCaptureViewController.m */,
+				F99690F715C8745F0027529B /* AudioCallViewController.h */,
+				F99690F815C8745F0027529B /* AudioCallViewController.m */,
 				F920223115C7402E002F6721 /* VideoUploaderViewController.h */,
 				F920223215C7402E002F6721 /* VideoUploaderViewController.m */,
 				F9C7782F15C7203F0017E63A /* MainMenuViewController.h */,
@@ -179,6 +194,9 @@
 				F9C7782315C71FFD0017E63A /* LocalReportAppDelegate.m in Sources */,
 				F9C7783115C7203F0017E63A /* MainMenuViewController.m in Sources */,
 				F920223315C7402E002F6721 /* VideoUploaderViewController.m in Sources */,
+				F99690F915C8745F0027529B /* AudioCallViewController.m in Sources */,
+				F99690FD15C874810027529B /* AudioCaptureViewController.m in Sources */,
+				F996910015C874A70027529B /* AudioUploaderViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
