@@ -41,6 +41,13 @@
     }
 }
 
+-(NSData *)video
+{
+    if(!_video){
+        _video = [NSData data];
+    }
+    return _video;
+}
 
 #define STANDARD_TIME 30 
 #define STANDARD_MESSAGE @"Example Message From Server"
@@ -89,7 +96,7 @@
     if (CFStringCompare ((__bridge CFStringRef) mediaType, kUTTypeMovie, 0) == kCFCompareEqualTo) {
         NSString *moviePath = [[info objectForKey: UIImagePickerControllerMediaURL] path];
         if (UIVideoAtPathIsCompatibleWithSavedPhotosAlbum (moviePath)) {
-            UISaveVideoAtPathToSavedPhotosAlbum (moviePath, nil, nil, nil);
+           // UISaveVideoAtPathToSavedPhotosAlbum (moviePath, nil, nil, nil);
         }
     }
     self.video = [NSData dataWithContentsOfURL:[info objectForKey:UIImagePickerControllerMediaURL]]; 
