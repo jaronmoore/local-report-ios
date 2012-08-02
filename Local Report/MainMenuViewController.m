@@ -92,10 +92,10 @@
             UISaveVideoAtPathToSavedPhotosAlbum (moviePath, nil, nil, nil);
         }
     }
-    
-    self.video = [NSData dataWithContentsOfURL:[NSURL URLWithString:[info objectForKey:UIImagePickerControllerMediaURL]]]; 
+    self.video = [NSData dataWithContentsOfURL:[info objectForKey:UIImagePickerControllerMediaURL]]; 
     [self dismissModalViewControllerAnimated: YES];
     VideoUploaderViewController *vuvc =[self.storyboard instantiateViewControllerWithIdentifier:@"vidUpload"];
+    vuvc.videoData = self.video;
     [self.navigationController pushViewController:vuvc animated:NO];
 }
 
@@ -112,12 +112,7 @@
     [controller presentModalViewController: cameraUI animated: YES];
     return YES;
 }
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([segue.identifier isEqualToString:@"Show upload"]) {
-        ((VideoUploaderViewController *)segue.destinationViewController).videoData = self.video;
-    }
-}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
