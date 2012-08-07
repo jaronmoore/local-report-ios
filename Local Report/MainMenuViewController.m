@@ -17,7 +17,7 @@
 @property NSTimeInterval time;
 @property BOOL recordedVideo;
 
-@property (weak, nonatomic) NSData *video;
+@property (strong, nonatomic) NSData *video;
 
 @end
 
@@ -94,12 +94,12 @@
     NSString *mediaType = [info objectForKey: UIImagePickerControllerMediaType];
     // Handle a movie capture
     if (CFStringCompare ((__bridge CFStringRef) mediaType, kUTTypeMovie, 0) == kCFCompareEqualTo) {
-        NSString *moviePath = [[info objectForKey: UIImagePickerControllerMediaURL] path];
-        if (UIVideoAtPathIsCompatibleWithSavedPhotosAlbum (moviePath)) {
+        NSURL *moviePath = [info objectForKey: UIImagePickerControllerMediaURL];
+        if (UIVideoAtPathIsCompatibleWithSavedPhotosAlbum ([moviePath path])) {
            // UISaveVideoAtPathToSavedPhotosAlbum (moviePath, nil, nil, nil);
+            self.video = [NSData dataWithContentsOfURL:moviePath]; 
         }
     }
-    self.video = [NSData dataWithContentsOfURL:[info objectForKey:UIImagePickerControllerMediaURL]]; 
     [self dismissModalViewControllerAnimated: YES];
     VideoUploaderViewController *vuvc =[self.storyboard instantiateViewControllerWithIdentifier:@"vidUpload"];
     vuvc.videoData = self.video;

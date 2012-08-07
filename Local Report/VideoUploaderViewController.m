@@ -7,6 +7,8 @@
 //
 
 #import "VideoUploaderViewController.h"
+#import "ASIHTTPRequest.h"
+#import "ASIFormDataRequest.h"
 
 @interface VideoUploaderViewController () <NSURLConnectionDelegate, NSURLConnectionDataDelegate>
 @property (strong, nonatomic) NSMutableData *receivedData;
@@ -31,70 +33,35 @@
     return _videoData;
 }
 
-- (void)connection:(NSURLConnection *)connection didSendBodyData:(NSInteger)bytesWritten totalBytesWritten:(NSInteger)totalBytesWritten totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite
-{
-    float progress = (((float)totalBytesWritten)/totalBytesExpectedToWrite);
-    [self.progressView setProgress:progress];
-    [self.progressView setNeedsDisplay];
-}
-
--(void)connectionDidFinishLoading:(NSURLConnection *)connection
-{
-    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-}
-
 - (void)uploadFileToServer
 {
     // Create the request.
-    NSMutableURLRequest *theRequest=[NSMutableURLRequest requestWithURL:[NSURL URLWithString:UPLOAD_URL]
-                                              cachePolicy:NSURLRequestUseProtocolCachePolicy
-                                          timeoutInterval:60.0];
-    [theRequest setHTTPMethod:@"POST"];
-    
-    // setup post string
-    NSMutableData *body = [NSMutableData data];
-    NSMutableString *postString = [[NSMutableString alloc] init];   
-    [postString appendFormat:@"file=%@", self.videoData];
-    [postString appendFormat:@"&userid=%@", self.userid];
-    [postString appendFormat:@"&form_submitted=%@", @"true"];
-
-    [body appendData:[postString dataUsingEncoding:NSUTF8StringEncoding]];
-    
-    [theRequest setHTTPBody:body];
-    
-    // create the connection with the request
-    // and start loading the data
-    NSURLConnection *theConnection=[[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
-    if (theConnection) {
-        // Create the NSMutableData to hold the received data.
-        // receivedData is an instance variable declared elsewhere.
-        
-        [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];        
-        self.receivedData = [NSMutableData data];
-    } else {
-        // Inform the user that the connection failed.
-    }
+    NSURL *uploadURL = [NSURL URLWithString:UPLOAD_URL];
+    ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:uploadURL];
+    [request setData:self.videoData forKey:@"file"];
+    [request setPostValue:@"1" forKey:@"participant_id"];
+    [request setPostValue:@"audioOrVideo" forKey:@"audio_or_video"];
+    [request setPostValue:@"true" forKey:@"form_submitted"];
+    [request setDelegate:self];
+    [request setDownloadProgressDelegate:self.progressView];
+    [request startAsynchronous];
 }
 
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
+- (void)requestFinished:(ASIHTTPRequest *)request
 {
-    // Append the new data to receivedData.
-    // receivedData is an instance variable declared elsewhere.
-    [self.receivedData appendData:data];
+    // Use when fetching text data
+    NSString *responseString = [request responseString];
+    NSLog(@"%@", responseString);
+    // Use when fetching binary data
+    NSData *responseData = [request responseData];
+    NSLog(@"%@", responseData);
 }
 
-- (void)connection:(NSURLConnection *)connection
-  didFailWithError:(NSError *)error
+- (void)requestFailed:(ASIHTTPRequest *)request
 {
-    // receivedData is declared as a method instance elsewhere
-    self.receivedData = nil;
-    
-    // inform the user
-    NSLog(@"Connection failed! Error - %@ %@",
-          [error localizedDescription],
-          [[error userInfo] objectForKey:NSURLErrorFailingURLStringErrorKey]);
+    NSError *error = [request error];
+    NSLog(@"%@", error);
 }
-
 
 - (void)viewDidAppear:(BOOL)animated
 {
