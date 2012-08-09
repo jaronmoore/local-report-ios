@@ -14,7 +14,6 @@
 		F920267615D19DBF00FB0417 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F920267515D19DBF00FB0417 /* libz.dylib */; };
 		F99690F915C8745F0027529B /* AudioCallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F99690F815C8745F0027529B /* AudioCallViewController.m */; };
 		F99690FD15C874810027529B /* AudioCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F99690FC15C874810027529B /* AudioCaptureViewController.m */; };
-		F996910015C874A70027529B /* AudioUploaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F99690FF15C874A70027529B /* AudioUploaderViewController.m */; };
 		F9B76F2115D1C25F00B166B9 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B76F0515D1C25F00B166B9 /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F9B76F2215D1C25F00B166B9 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B76F0815D1C25F00B166B9 /* ASIDataCompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F9B76F2315D1C25F00B166B9 /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B76F0A15D1C25F00B166B9 /* ASIDataDecompressor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -25,6 +24,25 @@
 		F9B76F2815D1C25F00B166B9 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B76F1615D1C25F00B166B9 /* ASINetworkQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F9B76F2915D1C25F00B166B9 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B76F1B15D1C25F00B166B9 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F9B76F2A15D1C25F00B166B9 /* ReachabilityAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B76F1D15D1C25F00B166B9 /* ReachabilityAppDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F9B7700F15D46B0F00B166B9 /* libTwilioClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9B7700E15D46B0F00B166B9 /* libTwilioClient.a */; };
+		F9B7701E15D46B8E00B166B9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9B7701D15D46B8E00B166B9 /* AudioToolbox.framework */; };
+		F9B7702015D46B9300B166B9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9B7701F15D46B9300B166B9 /* AVFoundation.framework */; };
+		F9B7703515D4711900B166B9 /* disconnect.wav in Resources */ = {isa = PBXBuildFile; fileRef = F9B7702615D4711900B166B9 /* disconnect.wav */; };
+		F9B7703615D4711900B166B9 /* dtmf_0.wav in Resources */ = {isa = PBXBuildFile; fileRef = F9B7702715D4711900B166B9 /* dtmf_0.wav */; };
+		F9B7703715D4711900B166B9 /* dtmf_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = F9B7702815D4711900B166B9 /* dtmf_1.wav */; };
+		F9B7703815D4711900B166B9 /* dtmf_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = F9B7702915D4711900B166B9 /* dtmf_2.wav */; };
+		F9B7703915D4711900B166B9 /* dtmf_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = F9B7702A15D4711900B166B9 /* dtmf_3.wav */; };
+		F9B7703A15D4711900B166B9 /* dtmf_4.wav in Resources */ = {isa = PBXBuildFile; fileRef = F9B7702B15D4711900B166B9 /* dtmf_4.wav */; };
+		F9B7703B15D4711900B166B9 /* dtmf_5.wav in Resources */ = {isa = PBXBuildFile; fileRef = F9B7702C15D4711900B166B9 /* dtmf_5.wav */; };
+		F9B7703C15D4711900B166B9 /* dtmf_6.wav in Resources */ = {isa = PBXBuildFile; fileRef = F9B7702D15D4711900B166B9 /* dtmf_6.wav */; };
+		F9B7703D15D4711900B166B9 /* dtmf_7.wav in Resources */ = {isa = PBXBuildFile; fileRef = F9B7702E15D4711900B166B9 /* dtmf_7.wav */; };
+		F9B7703E15D4711900B166B9 /* dtmf_8.wav in Resources */ = {isa = PBXBuildFile; fileRef = F9B7702F15D4711900B166B9 /* dtmf_8.wav */; };
+		F9B7703F15D4711900B166B9 /* dtmf_9.wav in Resources */ = {isa = PBXBuildFile; fileRef = F9B7703015D4711900B166B9 /* dtmf_9.wav */; };
+		F9B7704015D4711900B166B9 /* dtmf_hash.wav in Resources */ = {isa = PBXBuildFile; fileRef = F9B7703115D4711900B166B9 /* dtmf_hash.wav */; };
+		F9B7704115D4711900B166B9 /* dtmf_star.wav in Resources */ = {isa = PBXBuildFile; fileRef = F9B7703215D4711900B166B9 /* dtmf_star.wav */; };
+		F9B7704215D4711900B166B9 /* incoming.wav in Resources */ = {isa = PBXBuildFile; fileRef = F9B7703315D4711900B166B9 /* incoming.wav */; };
+		F9B7704315D4711900B166B9 /* outgoing.wav in Resources */ = {isa = PBXBuildFile; fileRef = F9B7703415D4711900B166B9 /* outgoing.wav */; };
+		F9B7704615D4722F00B166B9 /* TwilioPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B7704515D4722D00B166B9 /* TwilioPhone.m */; };
 		F9C7781315C71FFD0017E63A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C7781215C71FFC0017E63A /* UIKit.framework */; };
 		F9C7781515C71FFD0017E63A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C7781415C71FFD0017E63A /* Foundation.framework */; };
 		F9C7781715C71FFD0017E63A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C7781615C71FFD0017E63A /* CoreGraphics.framework */; };
@@ -47,8 +65,6 @@
 		F99690F815C8745F0027529B /* AudioCallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioCallViewController.m; sourceTree = "<group>"; };
 		F99690FB15C874810027529B /* AudioCaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioCaptureViewController.h; sourceTree = "<group>"; };
 		F99690FC15C874810027529B /* AudioCaptureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioCaptureViewController.m; sourceTree = "<group>"; };
-		F99690FE15C874A70027529B /* AudioUploaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioUploaderViewController.h; sourceTree = "<group>"; };
-		F99690FF15C874A70027529B /* AudioUploaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioUploaderViewController.m; sourceTree = "<group>"; };
 		F9B76F0415D1C25F00B166B9 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		F9B76F0515D1C25F00B166B9 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
 		F9B76F0615D1C25F00B166B9 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
@@ -73,6 +89,32 @@
 		F9B76F1B15D1C25F00B166B9 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		F9B76F1C15D1C25F00B166B9 /* ReachabilityAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReachabilityAppDelegate.h; sourceTree = "<group>"; };
 		F9B76F1D15D1C25F00B166B9 /* ReachabilityAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReachabilityAppDelegate.m; sourceTree = "<group>"; };
+		F9B7700E15D46B0F00B166B9 /* libTwilioClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTwilioClient.a; path = "Local Report/libTwilioClient.a"; sourceTree = "<group>"; };
+		F9B7701115D46B3B00B166B9 /* TCConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCConnection.h; sourceTree = "<group>"; };
+		F9B7701215D46B3B00B166B9 /* TCConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCConnectionDelegate.h; sourceTree = "<group>"; };
+		F9B7701315D46B3B00B166B9 /* TCDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCDevice.h; sourceTree = "<group>"; };
+		F9B7701415D46B3B00B166B9 /* TCDeviceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCDeviceDelegate.h; sourceTree = "<group>"; };
+		F9B7701515D46B3B00B166B9 /* TCPresenceEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCPresenceEvent.h; sourceTree = "<group>"; };
+		F9B7701615D46B3B00B166B9 /* TwilioClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwilioClient.h; sourceTree = "<group>"; };
+		F9B7701D15D46B8E00B166B9 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F9B7701F15D46B9300B166B9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F9B7702615D4711900B166B9 /* disconnect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = disconnect.wav; sourceTree = "<group>"; };
+		F9B7702715D4711900B166B9 /* dtmf_0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_0.wav; sourceTree = "<group>"; };
+		F9B7702815D4711900B166B9 /* dtmf_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_1.wav; sourceTree = "<group>"; };
+		F9B7702915D4711900B166B9 /* dtmf_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_2.wav; sourceTree = "<group>"; };
+		F9B7702A15D4711900B166B9 /* dtmf_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_3.wav; sourceTree = "<group>"; };
+		F9B7702B15D4711900B166B9 /* dtmf_4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_4.wav; sourceTree = "<group>"; };
+		F9B7702C15D4711900B166B9 /* dtmf_5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_5.wav; sourceTree = "<group>"; };
+		F9B7702D15D4711900B166B9 /* dtmf_6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_6.wav; sourceTree = "<group>"; };
+		F9B7702E15D4711900B166B9 /* dtmf_7.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_7.wav; sourceTree = "<group>"; };
+		F9B7702F15D4711900B166B9 /* dtmf_8.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_8.wav; sourceTree = "<group>"; };
+		F9B7703015D4711900B166B9 /* dtmf_9.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_9.wav; sourceTree = "<group>"; };
+		F9B7703115D4711900B166B9 /* dtmf_hash.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_hash.wav; sourceTree = "<group>"; };
+		F9B7703215D4711900B166B9 /* dtmf_star.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_star.wav; sourceTree = "<group>"; };
+		F9B7703315D4711900B166B9 /* incoming.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = incoming.wav; sourceTree = "<group>"; };
+		F9B7703415D4711900B166B9 /* outgoing.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = outgoing.wav; sourceTree = "<group>"; };
+		F9B7704415D4722D00B166B9 /* TwilioPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwilioPhone.h; sourceTree = "<group>"; };
+		F9B7704515D4722D00B166B9 /* TwilioPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwilioPhone.m; sourceTree = "<group>"; };
 		F9C7780E15C71FFC0017E63A /* Local Report.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Local Report.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9C7781215C71FFC0017E63A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F9C7781415C71FFD0017E63A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -95,6 +137,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F920267615D19DBF00FB0417 /* libz.dylib in Frameworks */,
+				F9B7702015D46B9300B166B9 /* AVFoundation.framework in Frameworks */,
+				F9B7701E15D46B8E00B166B9 /* AudioToolbox.framework in Frameworks */,
 				F920267415D19DA000FB0417 /* SystemConfiguration.framework in Frameworks */,
 				F920267215D19D9400FB0417 /* CFNetwork.framework in Frameworks */,
 				F9C7783C15C730900017E63A /* MobileCoreServices.framework in Frameworks */,
@@ -102,6 +146,7 @@
 				F9C7781315C71FFD0017E63A /* UIKit.framework in Frameworks */,
 				F9C7781515C71FFD0017E63A /* Foundation.framework in Frameworks */,
 				F9C7781715C71FFD0017E63A /* CoreGraphics.framework in Frameworks */,
+				F9B7700F15D46B0F00B166B9 /* libTwilioClient.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +156,7 @@
 		F9B76F0315D1C25F00B166B9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F9B7701015D46B3B00B166B9 /* Headers */,
 				F9B76F0415D1C25F00B166B9 /* ASIAuthenticationDialog.h */,
 				F9B76F0515D1C25F00B166B9 /* ASIAuthenticationDialog.m */,
 				F9B76F0615D1C25F00B166B9 /* ASICacheDelegate.h */,
@@ -147,6 +193,41 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		F9B7701015D46B3B00B166B9 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				F9B7701115D46B3B00B166B9 /* TCConnection.h */,
+				F9B7701215D46B3B00B166B9 /* TCConnectionDelegate.h */,
+				F9B7701315D46B3B00B166B9 /* TCDevice.h */,
+				F9B7701415D46B3B00B166B9 /* TCDeviceDelegate.h */,
+				F9B7701515D46B3B00B166B9 /* TCPresenceEvent.h */,
+				F9B7701615D46B3B00B166B9 /* TwilioClient.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		F9B7702515D4711900B166B9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F9B7702615D4711900B166B9 /* disconnect.wav */,
+				F9B7702715D4711900B166B9 /* dtmf_0.wav */,
+				F9B7702815D4711900B166B9 /* dtmf_1.wav */,
+				F9B7702915D4711900B166B9 /* dtmf_2.wav */,
+				F9B7702A15D4711900B166B9 /* dtmf_3.wav */,
+				F9B7702B15D4711900B166B9 /* dtmf_4.wav */,
+				F9B7702C15D4711900B166B9 /* dtmf_5.wav */,
+				F9B7702D15D4711900B166B9 /* dtmf_6.wav */,
+				F9B7702E15D4711900B166B9 /* dtmf_7.wav */,
+				F9B7702F15D4711900B166B9 /* dtmf_8.wav */,
+				F9B7703015D4711900B166B9 /* dtmf_9.wav */,
+				F9B7703115D4711900B166B9 /* dtmf_hash.wav */,
+				F9B7703215D4711900B166B9 /* dtmf_star.wav */,
+				F9B7703315D4711900B166B9 /* incoming.wav */,
+				F9B7703415D4711900B166B9 /* outgoing.wav */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		F9C7780315C71FFC0017E63A = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +249,9 @@
 			isa = PBXGroup;
 			children = (
 				F920267515D19DBF00FB0417 /* libz.dylib */,
+				F9B7700E15D46B0F00B166B9 /* libTwilioClient.a */,
+				F9B7701F15D46B9300B166B9 /* AVFoundation.framework */,
+				F9B7701D15D46B8E00B166B9 /* AudioToolbox.framework */,
 				F920267315D19DA000FB0417 /* SystemConfiguration.framework */,
 				F920267115D19D9400FB0417 /* CFNetwork.framework */,
 				F9C7783B15C730900017E63A /* MobileCoreServices.framework */,
@@ -183,8 +267,6 @@
 			isa = PBXGroup;
 			children = (
 				F920223515C74201002F6721 /* Storyboard.storyboard */,
-				F99690FE15C874A70027529B /* AudioUploaderViewController.h */,
-				F99690FF15C874A70027529B /* AudioUploaderViewController.m */,
 				F99690FB15C874810027529B /* AudioCaptureViewController.h */,
 				F99690FC15C874810027529B /* AudioCaptureViewController.m */,
 				F99690F715C8745F0027529B /* AudioCallViewController.h */,
@@ -193,6 +275,9 @@
 				F920223215C7402E002F6721 /* VideoUploaderViewController.m */,
 				F9C7782F15C7203F0017E63A /* MainMenuViewController.h */,
 				F9C7783015C7203F0017E63A /* MainMenuViewController.m */,
+				F9B7704415D4722D00B166B9 /* TwilioPhone.h */,
+				F9B7704515D4722D00B166B9 /* TwilioPhone.m */,
+				F9B7702515D4711900B166B9 /* Resources */,
 				F9B76F0315D1C25F00B166B9 /* Classes */,
 				F9C7781915C71FFD0017E63A /* Supporting Files */,
 			);
@@ -267,6 +352,21 @@
 			files = (
 				F9C7781D15C71FFD0017E63A /* InfoPlist.strings in Resources */,
 				F920223615C74201002F6721 /* Storyboard.storyboard in Resources */,
+				F9B7703515D4711900B166B9 /* disconnect.wav in Resources */,
+				F9B7703615D4711900B166B9 /* dtmf_0.wav in Resources */,
+				F9B7703715D4711900B166B9 /* dtmf_1.wav in Resources */,
+				F9B7703815D4711900B166B9 /* dtmf_2.wav in Resources */,
+				F9B7703915D4711900B166B9 /* dtmf_3.wav in Resources */,
+				F9B7703A15D4711900B166B9 /* dtmf_4.wav in Resources */,
+				F9B7703B15D4711900B166B9 /* dtmf_5.wav in Resources */,
+				F9B7703C15D4711900B166B9 /* dtmf_6.wav in Resources */,
+				F9B7703D15D4711900B166B9 /* dtmf_7.wav in Resources */,
+				F9B7703E15D4711900B166B9 /* dtmf_8.wav in Resources */,
+				F9B7703F15D4711900B166B9 /* dtmf_9.wav in Resources */,
+				F9B7704015D4711900B166B9 /* dtmf_hash.wav in Resources */,
+				F9B7704115D4711900B166B9 /* dtmf_star.wav in Resources */,
+				F9B7704215D4711900B166B9 /* incoming.wav in Resources */,
+				F9B7704315D4711900B166B9 /* outgoing.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +383,6 @@
 				F920223315C7402E002F6721 /* VideoUploaderViewController.m in Sources */,
 				F99690F915C8745F0027529B /* AudioCallViewController.m in Sources */,
 				F99690FD15C874810027529B /* AudioCaptureViewController.m in Sources */,
-				F996910015C874A70027529B /* AudioUploaderViewController.m in Sources */,
 				F9B76F2115D1C25F00B166B9 /* ASIAuthenticationDialog.m in Sources */,
 				F9B76F2215D1C25F00B166B9 /* ASIDataCompressor.m in Sources */,
 				F9B76F2315D1C25F00B166B9 /* ASIDataDecompressor.m in Sources */,
@@ -294,6 +393,7 @@
 				F9B76F2815D1C25F00B166B9 /* ASINetworkQueue.m in Sources */,
 				F9B76F2915D1C25F00B166B9 /* Reachability.m in Sources */,
 				F9B76F2A15D1C25F00B166B9 /* ReachabilityAppDelegate.m in Sources */,
+				F9B7704615D4722F00B166B9 /* TwilioPhone.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,7 +463,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Local Report/Local Report-Prefix.pch";
 				INFOPLIST_FILE = "Local Report/Local Report-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Local Report\"",
+				);
+				OTHER_CFLAGS = "$(OTHER_CFLAGS)";
 				"OTHER_CFLAGS[arch=*]" = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = "${SDK_DIR}/usr/include/libxml2";
 				WRAPPER_EXTENSION = app;
@@ -378,6 +484,17 @@
 				GCC_PREFIX_HEADER = "Local Report/Local Report-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = /usr/include/libxml2;
 				INFOPLIST_FILE = "Local Report/Local Report-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Local Report\"",
+				);
+				OTHER_CFLAGS = "$(OTHER_CFLAGS)";
+				"OTHER_CFLAGS[arch=*]" = (
+					"-ObjC",
+					"-all_load",
+					"-DNS_BLOCK_ASSERTIONS=1",
+				);
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = "${SDK_DIR}/usr/include/libxml2";
 				WRAPPER_EXTENSION = app;
