@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TwilioPhone.h"
 
 @interface LocalReportAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) TwilioPhone *phone;
 
 @end

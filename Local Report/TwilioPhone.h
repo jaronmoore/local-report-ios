@@ -13,4 +13,6 @@
 
 @property (strong, nonatomic) TCDevice *device;
 
+-(void)connect;
+-(void)disconnect;
 @end

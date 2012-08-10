@@ -7,6 +7,8 @@
 //
 
 #import "AudioCallViewController.h"
+#import "TwilioPhone.h"
+#import "LocalReportAppDelegate.h"
 
 @interface AudioCallViewController ()
 
@@ -21,6 +23,19 @@
         // Custom initialization
     }
     return self;
+}
+
+- (IBAction)dialButtonPressed:(UIButton *)sender 
+{
+    LocalReportAppDelegate *appDelegate = (LocalReportAppDelegate *)[UIApplication sharedApplication].delegate;
+    TwilioPhone *phone = appDelegate.phone;
+    [phone connect];
+}
+- (IBAction)hangupButtonPressed:(UIButton *)sender 
+{
+    LocalReportAppDelegate *appDelegate = (LocalReportAppDelegate *)[UIApplication sharedApplication].delegate;
+    TwilioPhone *phone = appDelegate.phone;
+    [phone disconnect];
 }
 
 - (void)viewDidLoad

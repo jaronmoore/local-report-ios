@@ -11,10 +11,11 @@
 @implementation LocalReportAppDelegate
 
 @synthesize window = _window;
+@synthesize phone = _phone;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    self.phone = [[TwilioPhone alloc] init];
     return YES;
 }
 							
