@@ -7,12 +7,23 @@
 //
 
 #import "AudioCaptureViewController.h"
+#import "VideoUploaderViewController.h"
 
 @interface AudioCaptureViewController ()
 
+@property (strong, nonatomic) IBOutlet UIButton *stopButton;
+@property (strong, nonatomic) IBOutlet UIButton *uploadButton;
+@property (strong, nonatomic) NSURL *recordedTmpFile;
+@property (strong, nonatomic) AVAudioRecorder *recorder;
+@property (strong, nonatomic) NSData *audio;
 @end
 
 @implementation AudioCaptureViewController
+@synthesize stopButton = _stopButton;
+@synthesize uploadButton = _uploadButton;
+@synthesize recordedTmpFile = _recordedTmpFile;
+@synthesize recorder = _recorder;
+@synthesize audio = _audio;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -22,15 +33,56 @@
     }
     return self;
 }
+- (IBAction)stopButtonPressed:(UIButton *)sender 
+{
+    [self.recorder stop];
+}
+- (IBAction)uploadPressed:(UIButton *)sender 
+{
+    self.audio = [NSData dataWithContentsOfURL:self.recordedTmpFile];
+    if (self.audio) {
+    VideoUploaderViewController *vuvc =[self.storyboard instantiateViewControllerWithIdentifier:@"vidUpload"];
+    vuvc.videoData = self.audio;
+    [self.navigationController pushViewController:vuvc animated:YES];
+    }
+}
+
+- (void)startRecording
+{
+    NSMutableDictionary* recordSetting =[[NSMutableDictionary alloc]init];
+    [recordSetting setValue:[NSNumber numberWithInt:kAudioFormatAppleIMA4] forKey:AVFormatIDKey];
+    [recordSetting setValue:[NSNumber numberWithFloat:44100.0] forKey:AVSampleRateKey];
+    [recordSetting setValue:[NSNumber numberWithInt:2] forKey:AVNumberOfChannelsKey];
+    
+    self.recordedTmpFile = [NSURL fileURLWithPath:[NSTemporaryDirectory() stringByAppendingPathComponent: [NSString stringWithFormat: @"%.0f.%@", [NSDate timeIntervalSinceReferenceDate] * 1000.0, @"caf"]]];
+    NSLog(@"Using File called: %@",self.recordedTmpFile);
+    //Setup the recorder to use this file and record to it.
+    self.recorder = [[ AVAudioRecorder alloc] initWithURL:self.recordedTmpFile settings:recordSetting error:nil];
+    //Use the recorder to start the recording.
+    //Im not sure why we set the delegate to self yet.  
+    //Found this in antother example, but Im fuzzy on this still.
+    [self.recorder setDelegate:self];
+    //We call this to start the recording process and initialize 
+    //the subsstems so that when we actually say "record" it starts right away.
+    [self.recorder prepareToRecord];
+    //Start the actual Recording
+    [self.recorder record];
+    
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+    [audioSession setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
+    [audioSession setActive:YES error:nil];
+    [self startRecording];
 }
 
 - (void)viewDidUnload
 {
+    [self setStopButton:nil];
+    [self setUploadButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }

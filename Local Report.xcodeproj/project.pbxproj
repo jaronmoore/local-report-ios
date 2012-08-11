@@ -43,6 +43,7 @@
 		F9B7704215D4711900B166B9 /* incoming.wav in Resources */ = {isa = PBXBuildFile; fileRef = F9B7703315D4711900B166B9 /* incoming.wav */; };
 		F9B7704315D4711900B166B9 /* outgoing.wav in Resources */ = {isa = PBXBuildFile; fileRef = F9B7703415D4711900B166B9 /* outgoing.wav */; };
 		F9B7704615D4722F00B166B9 /* TwilioPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B7704515D4722D00B166B9 /* TwilioPhone.m */; };
+		F9C25EFE15D5D66700567C16 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C25EFD15D5D66700567C16 /* CoreAudio.framework */; };
 		F9C7781315C71FFD0017E63A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C7781215C71FFC0017E63A /* UIKit.framework */; };
 		F9C7781515C71FFD0017E63A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C7781415C71FFD0017E63A /* Foundation.framework */; };
 		F9C7781715C71FFD0017E63A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C7781615C71FFD0017E63A /* CoreGraphics.framework */; };
@@ -115,6 +116,7 @@
 		F9B7703415D4711900B166B9 /* outgoing.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = outgoing.wav; sourceTree = "<group>"; };
 		F9B7704415D4722D00B166B9 /* TwilioPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwilioPhone.h; sourceTree = "<group>"; };
 		F9B7704515D4722D00B166B9 /* TwilioPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwilioPhone.m; sourceTree = "<group>"; };
+		F9C25EFD15D5D66700567C16 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		F9C7780E15C71FFC0017E63A /* Local Report.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Local Report.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9C7781215C71FFC0017E63A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F9C7781415C71FFD0017E63A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -138,6 +140,7 @@
 			files = (
 				F920267615D19DBF00FB0417 /* libz.dylib in Frameworks */,
 				F9B7702015D46B9300B166B9 /* AVFoundation.framework in Frameworks */,
+				F9C25EFE15D5D66700567C16 /* CoreAudio.framework in Frameworks */,
 				F9B7701E15D46B8E00B166B9 /* AudioToolbox.framework in Frameworks */,
 				F920267415D19DA000FB0417 /* SystemConfiguration.framework in Frameworks */,
 				F920267215D19D9400FB0417 /* CFNetwork.framework in Frameworks */,
@@ -259,6 +262,7 @@
 				F9C7781215C71FFC0017E63A /* UIKit.framework */,
 				F9C7781415C71FFD0017E63A /* Foundation.framework */,
 				F9C7781615C71FFD0017E63A /* CoreGraphics.framework */,
+				F9C25EFD15D5D66700567C16 /* CoreAudio.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

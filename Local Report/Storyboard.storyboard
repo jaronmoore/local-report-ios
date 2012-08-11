@@ -154,6 +154,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="stopButtonPressed:" destination="urm-UP-PG9" eventType="touchUpInside" id="PxR-GS-EZo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Jub-ym-1Ic">
                                 <rect key="frame" x="178" y="255" width="122" height="37"/>
@@ -167,37 +170,20 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="VQW-1k-XI0" kind="push" id="f9f-bp-Hkc"/>
+                                    <action selector="uploadPressed:" destination="urm-UP-PG9" eventType="touchUpInside" id="AON-rh-gdf"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Record Audio" id="fon-I8-8qt"/>
+                    <connections>
+                        <outlet property="stopButton" destination="Ul6-fl-a93" id="eX7-WO-GQD"/>
+                        <outlet property="uploadButton" destination="Jub-ym-1Ic" id="x2U-j3-rIR"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1330" y="289"/>
-        </scene>
-        <!--Audio Uploader View Controller - Upload Audio-->
-        <scene sceneID="6LH-OS-W9b">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="l68-mB-UGa" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="VQW-1k-XI0" customClass="AudioUploaderViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gLU-EC-P3e">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="Bu0-md-giW">
-                                <rect key="frame" x="85" y="203" width="150" height="9"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </progressView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Upload Audio" id="cmZ-pv-1Gm"/>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="1760" y="296"/>
         </scene>
         <!--Video Uploader View Controller - Video Uploader-->
         <scene sceneID="P12-5h-Lln">
@@ -248,6 +234,10 @@
         </class>
         <class className="AudioCaptureViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AudioCaptureViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="stopButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="uploadButton" candidateClass="UIButton"/>
+            </relationships>
         </class>
         <class className="MainMenuViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MainMenuViewController.h"/>
