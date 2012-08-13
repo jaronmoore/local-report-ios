@@ -173,11 +173,19 @@
                                     <action selector="uploadPressed:" destination="urm-UP-PG9" eventType="touchUpInside" id="AON-rh-gdf"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Ready" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="nOR-Op-uxR">
+                                <rect key="frame" x="20" y="68" width="280" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Record Audio" id="fon-I8-8qt"/>
                     <connections>
+                        <outlet property="statusText" destination="nOR-Op-uxR" id="TjD-GG-bgu"/>
                         <outlet property="stopButton" destination="Ul6-fl-a93" id="eX7-WO-GQD"/>
                         <outlet property="uploadButton" destination="Jub-ym-1Ic" id="x2U-j3-rIR"/>
                     </connections>
@@ -235,6 +243,7 @@
         <class className="AudioCaptureViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AudioCaptureViewController.h"/>
             <relationships>
+                <relationship kind="outlet" name="statusText" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="stopButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="uploadButton" candidateClass="UIButton"/>
             </relationships>

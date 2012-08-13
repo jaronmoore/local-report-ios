@@ -11,5 +11,6 @@
 @interface VideoUploaderViewController : UIViewController
 
 @property (strong, nonatomic) NSData *videoData;
+@property (strong, nonatomic) NSString *audioOrVideo;
 
 @end

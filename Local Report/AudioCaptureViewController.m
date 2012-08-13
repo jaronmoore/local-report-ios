@@ -16,6 +16,9 @@
 @property (strong, nonatomic) NSURL *recordedTmpFile;
 @property (strong, nonatomic) AVAudioRecorder *recorder;
 @property (strong, nonatomic) NSData *audio;
+
+@property (strong, nonatomic) IBOutlet UILabel *statusText;
+
 @end
 
 @implementation AudioCaptureViewController
@@ -24,6 +27,7 @@
 @synthesize recordedTmpFile = _recordedTmpFile;
 @synthesize recorder = _recorder;
 @synthesize audio = _audio;
+@synthesize statusText = _statusText;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,6 +39,7 @@
 }
 - (IBAction)stopButtonPressed:(UIButton *)sender 
 {
+    self.statusText.text = @"Ready to Upload";
     [self.recorder stop];
 }
 - (IBAction)uploadPressed:(UIButton *)sender 
@@ -43,6 +48,7 @@
     if (self.audio) {
     VideoUploaderViewController *vuvc =[self.storyboard instantiateViewControllerWithIdentifier:@"vidUpload"];
     vuvc.videoData = self.audio;
+    vuvc.audioOrVideo = @"audio";
     [self.navigationController pushViewController:vuvc animated:YES];
     }
 }
@@ -67,7 +73,7 @@
     [self.recorder prepareToRecord];
     //Start the actual Recording
     [self.recorder record];
-    
+    self.statusText.text = @"Recording";
 }
 
 - (void)viewDidLoad
@@ -83,6 +89,7 @@
 {
     [self setStopButton:nil];
     [self setUploadButton:nil];
+    [self setStatusText:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }

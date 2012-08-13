@@ -103,6 +103,7 @@
     [self dismissModalViewControllerAnimated: YES];
     VideoUploaderViewController *vuvc =[self.storyboard instantiateViewControllerWithIdentifier:@"vidUpload"];
     vuvc.videoData = self.video;
+    vuvc.audioOrVideo = @"video";
     [self.navigationController pushViewController:vuvc animated:NO];
 }
 
