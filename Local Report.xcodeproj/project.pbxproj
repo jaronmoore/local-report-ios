@@ -28,18 +28,6 @@
 		F9B7701E15D46B8E00B166B9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9B7701D15D46B8E00B166B9 /* AudioToolbox.framework */; };
 		F9B7702015D46B9300B166B9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9B7701F15D46B9300B166B9 /* AVFoundation.framework */; };
 		F9B7703515D4711900B166B9 /* disconnect.wav in Resources */ = {isa = PBXBuildFile; fileRef = F9B7702615D4711900B166B9 /* disconnect.wav */; };
-		F9B7703615D4711900B166B9 /* dtmf_0.wav in Resources */ = {isa = PBXBuildFile; fileRef = F9B7702715D4711900B166B9 /* dtmf_0.wav */; };
-		F9B7703715D4711900B166B9 /* dtmf_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = F9B7702815D4711900B166B9 /* dtmf_1.wav */; };
-		F9B7703815D4711900B166B9 /* dtmf_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = F9B7702915D4711900B166B9 /* dtmf_2.wav */; };
-		F9B7703915D4711900B166B9 /* dtmf_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = F9B7702A15D4711900B166B9 /* dtmf_3.wav */; };
-		F9B7703A15D4711900B166B9 /* dtmf_4.wav in Resources */ = {isa = PBXBuildFile; fileRef = F9B7702B15D4711900B166B9 /* dtmf_4.wav */; };
-		F9B7703B15D4711900B166B9 /* dtmf_5.wav in Resources */ = {isa = PBXBuildFile; fileRef = F9B7702C15D4711900B166B9 /* dtmf_5.wav */; };
-		F9B7703C15D4711900B166B9 /* dtmf_6.wav in Resources */ = {isa = PBXBuildFile; fileRef = F9B7702D15D4711900B166B9 /* dtmf_6.wav */; };
-		F9B7703D15D4711900B166B9 /* dtmf_7.wav in Resources */ = {isa = PBXBuildFile; fileRef = F9B7702E15D4711900B166B9 /* dtmf_7.wav */; };
-		F9B7703E15D4711900B166B9 /* dtmf_8.wav in Resources */ = {isa = PBXBuildFile; fileRef = F9B7702F15D4711900B166B9 /* dtmf_8.wav */; };
-		F9B7703F15D4711900B166B9 /* dtmf_9.wav in Resources */ = {isa = PBXBuildFile; fileRef = F9B7703015D4711900B166B9 /* dtmf_9.wav */; };
-		F9B7704015D4711900B166B9 /* dtmf_hash.wav in Resources */ = {isa = PBXBuildFile; fileRef = F9B7703115D4711900B166B9 /* dtmf_hash.wav */; };
-		F9B7704115D4711900B166B9 /* dtmf_star.wav in Resources */ = {isa = PBXBuildFile; fileRef = F9B7703215D4711900B166B9 /* dtmf_star.wav */; };
 		F9B7704215D4711900B166B9 /* incoming.wav in Resources */ = {isa = PBXBuildFile; fileRef = F9B7703315D4711900B166B9 /* incoming.wav */; };
 		F9B7704315D4711900B166B9 /* outgoing.wav in Resources */ = {isa = PBXBuildFile; fileRef = F9B7703415D4711900B166B9 /* outgoing.wav */; };
 		F9B7704615D4722F00B166B9 /* TwilioPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B7704515D4722D00B166B9 /* TwilioPhone.m */; };
@@ -53,6 +41,7 @@
 		F9C7783115C7203F0017E63A /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C7783015C7203F0017E63A /* MainMenuViewController.m */; };
 		F9C7783715C72D2A0017E63A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C7783615C72D2A0017E63A /* QuartzCore.framework */; };
 		F9C7783C15C730900017E63A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C7783B15C730900017E63A /* MobileCoreServices.framework */; };
+		F9F7FF0415DD4EC500D43CC1 /* recordbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = F9F7FF0315DD4EC500D43CC1 /* recordbutton.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,18 +89,6 @@
 		F9B7701D15D46B8E00B166B9 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		F9B7701F15D46B9300B166B9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F9B7702615D4711900B166B9 /* disconnect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = disconnect.wav; sourceTree = "<group>"; };
-		F9B7702715D4711900B166B9 /* dtmf_0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_0.wav; sourceTree = "<group>"; };
-		F9B7702815D4711900B166B9 /* dtmf_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_1.wav; sourceTree = "<group>"; };
-		F9B7702915D4711900B166B9 /* dtmf_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_2.wav; sourceTree = "<group>"; };
-		F9B7702A15D4711900B166B9 /* dtmf_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_3.wav; sourceTree = "<group>"; };
-		F9B7702B15D4711900B166B9 /* dtmf_4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_4.wav; sourceTree = "<group>"; };
-		F9B7702C15D4711900B166B9 /* dtmf_5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_5.wav; sourceTree = "<group>"; };
-		F9B7702D15D4711900B166B9 /* dtmf_6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_6.wav; sourceTree = "<group>"; };
-		F9B7702E15D4711900B166B9 /* dtmf_7.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_7.wav; sourceTree = "<group>"; };
-		F9B7702F15D4711900B166B9 /* dtmf_8.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_8.wav; sourceTree = "<group>"; };
-		F9B7703015D4711900B166B9 /* dtmf_9.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_9.wav; sourceTree = "<group>"; };
-		F9B7703115D4711900B166B9 /* dtmf_hash.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_hash.wav; sourceTree = "<group>"; };
-		F9B7703215D4711900B166B9 /* dtmf_star.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dtmf_star.wav; sourceTree = "<group>"; };
 		F9B7703315D4711900B166B9 /* incoming.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = incoming.wav; sourceTree = "<group>"; };
 		F9B7703415D4711900B166B9 /* outgoing.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = outgoing.wav; sourceTree = "<group>"; };
 		F9B7704415D4722D00B166B9 /* TwilioPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwilioPhone.h; sourceTree = "<group>"; };
@@ -131,6 +108,7 @@
 		F9C7783015C7203F0017E63A /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
 		F9C7783615C72D2A0017E63A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F9C7783B15C730900017E63A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		F9F7FF0315DD4EC500D43CC1 /* recordbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recordbutton.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,19 +190,8 @@
 		F9B7702515D4711900B166B9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F9F7FF0315DD4EC500D43CC1 /* recordbutton.png */,
 				F9B7702615D4711900B166B9 /* disconnect.wav */,
-				F9B7702715D4711900B166B9 /* dtmf_0.wav */,
-				F9B7702815D4711900B166B9 /* dtmf_1.wav */,
-				F9B7702915D4711900B166B9 /* dtmf_2.wav */,
-				F9B7702A15D4711900B166B9 /* dtmf_3.wav */,
-				F9B7702B15D4711900B166B9 /* dtmf_4.wav */,
-				F9B7702C15D4711900B166B9 /* dtmf_5.wav */,
-				F9B7702D15D4711900B166B9 /* dtmf_6.wav */,
-				F9B7702E15D4711900B166B9 /* dtmf_7.wav */,
-				F9B7702F15D4711900B166B9 /* dtmf_8.wav */,
-				F9B7703015D4711900B166B9 /* dtmf_9.wav */,
-				F9B7703115D4711900B166B9 /* dtmf_hash.wav */,
-				F9B7703215D4711900B166B9 /* dtmf_star.wav */,
 				F9B7703315D4711900B166B9 /* incoming.wav */,
 				F9B7703415D4711900B166B9 /* outgoing.wav */,
 			);
@@ -357,20 +324,9 @@
 				F9C7781D15C71FFD0017E63A /* InfoPlist.strings in Resources */,
 				F920223615C74201002F6721 /* Storyboard.storyboard in Resources */,
 				F9B7703515D4711900B166B9 /* disconnect.wav in Resources */,
-				F9B7703615D4711900B166B9 /* dtmf_0.wav in Resources */,
-				F9B7703715D4711900B166B9 /* dtmf_1.wav in Resources */,
-				F9B7703815D4711900B166B9 /* dtmf_2.wav in Resources */,
-				F9B7703915D4711900B166B9 /* dtmf_3.wav in Resources */,
-				F9B7703A15D4711900B166B9 /* dtmf_4.wav in Resources */,
-				F9B7703B15D4711900B166B9 /* dtmf_5.wav in Resources */,
-				F9B7703C15D4711900B166B9 /* dtmf_6.wav in Resources */,
-				F9B7703D15D4711900B166B9 /* dtmf_7.wav in Resources */,
-				F9B7703E15D4711900B166B9 /* dtmf_8.wav in Resources */,
-				F9B7703F15D4711900B166B9 /* dtmf_9.wav in Resources */,
-				F9B7704015D4711900B166B9 /* dtmf_hash.wav in Resources */,
-				F9B7704115D4711900B166B9 /* dtmf_star.wav in Resources */,
 				F9B7704215D4711900B166B9 /* incoming.wav in Resources */,
 				F9B7704315D4711900B166B9 /* outgoing.wav in Resources */,
+				F9F7FF0415DD4EC500D43CC1 /* recordbutton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +420,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jaron Moore (LGTXZ96G4F)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Local Report/Local Report-Prefix.pch";
 				INFOPLIST_FILE = "Local Report/Local Report-Info.plist";
@@ -479,6 +436,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "EE35C7C6-4B9D-45A1-A5D4-4FB4CD6B8902";
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = "${SDK_DIR}/usr/include/libxml2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -488,6 +446,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Ralph Castro";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Local Report/Local Report-Prefix.pch";
 				"HEADER_SEARCH_PATHS[arch=*]" = /usr/include/libxml2;
@@ -508,6 +467,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "F5B19D89-FA07-4F20-B70D-10A254610408";
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = "${SDK_DIR}/usr/include/libxml2";
 				WRAPPER_EXTENSION = app;
 			};

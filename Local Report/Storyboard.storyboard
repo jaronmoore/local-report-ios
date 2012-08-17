@@ -215,7 +215,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="893" y="-305"/>
+            <point key="canvasLocation" x="885" y="-280"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ils-fa-sGp">
@@ -236,32 +236,6 @@
             <point key="canvasLocation" x="-53" y="-17"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="AudioCallViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AudioCallViewController.h"/>
-        </class>
-        <class className="AudioCaptureViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AudioCaptureViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="statusText" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="stopButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="uploadButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="MainMenuViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainMenuViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="messagesLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="timerLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="VideoUploaderViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/VideoUploaderViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="progressView" candidateClass="UIProgressView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

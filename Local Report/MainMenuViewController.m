@@ -11,6 +11,8 @@
 #import "VideoUploaderViewController.h"
 #import <MobileCoreServices/UTCoreTypes.h>
 
+
+
 @interface MainMenuViewController ()  <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 
@@ -19,11 +21,14 @@
 
 @property (strong, nonatomic) NSData *video;
 
+@property (strong, nonatomic) UIImagePickerController *picker;
+@property (strong, nonatomic) UIToolbar *pickerToolbar;
+
+@property BOOL enabledButton;
+
 @end
 
 @implementation MainMenuViewController
-
-
 @synthesize timerLabel = _timerLabel;
 @synthesize messagesLabel = _messagesLabel;
 
@@ -31,6 +36,12 @@
 @synthesize time = _time;
 
 @synthesize video = _video;
+
+@synthesize picker = _picker;
+@synthesize pickerToolbar = _pickerToolbar;
+
+
+@synthesize enabledButton;
 
 - (IBAction)shootVideo:(UIButton *)sender 
 {
@@ -52,20 +63,19 @@
 #define STANDARD_TIME 30 
 #define STANDARD_MESSAGE @"Example Message From Server"
 
-- (void)updateTimerLabel
+- (void)updateTimerLabel:(NSTimer *)sender
 {
     if (self.time > 0){
-        self.timerLabel.text = [NSString stringWithFormat:@"%@ %g", @"Time Remaining: ", self.time];
+        ((UILabel *)sender.userInfo).text = [NSString stringWithFormat:@"%g", self.time];
          self.time--;
     } else {
-        self.timerLabel.text = @"Time's up!";
+        ((UILabel *)sender.userInfo).text = @"Time's up!";
     }
 }
 - (void)setCountdownTime:(NSTimeInterval)time
 {
     self.time = time;
-    NSTimer *timer;
-    timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateTimerLabel) userInfo:nil repeats:YES];
+    [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateTimerLabel:) userInfo:self.timerLabel repeats:YES];
 }
 
 - (void)setMessage:(NSString *)message
@@ -84,10 +94,39 @@
     [self dismissModalViewControllerAnimated: YES];
 }
 
+-(void)stopRecording
+{
+    [self.picker stopVideoCapture];
+}
 
+-(void) setUpTimerUI
+{
+    UILabel *timer = [[UILabel alloc]initWithFrame:CGRectMake(15, 30, 40, 25)];
+    timer.text = @"20";
+    timer.backgroundColor = [UIColor clearColor];
+    timer.textColor = [UIColor whiteColor];
+    timer.font = [UIFont systemFontOfSize:24];
+    [timer setTransform:CGAffineTransformMakeRotation(M_PI / 2)];
+    self.time = 20;
+    [self.picker.cameraOverlayView addSubview:timer];
+    [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateTimerLabel:) userInfo:timer repeats:YES];
+}
+
+-(void) recordPressed
+{
+    if (enabledButton) {
+        if([self.picker startVideoCapture])
+        {
+            UIBarButtonItem *recordButton = [self.pickerToolbar.items lastObject];
+            [recordButton setEnabled:NO];
+            [NSTimer scheduledTimerWithTimeInterval:20 target:self selector:@selector(stopRecording) userInfo:nil repeats:NO];
+            [self setUpTimerUI];
+            enabledButton = NO;
+        }
+    }
+}
 
 // For responding to the user accepting a newly-captured picture or movie
-
 - (void) imagePickerController: (UIImagePickerController *) picker 
  didFinishPickingMediaWithInfo: (NSDictionary *) info 
 {
@@ -107,24 +146,44 @@
     [self.navigationController pushViewController:vuvc animated:NO];
 }
 
-
 - (BOOL) startCameraControllerFromViewController: (UIViewController*) controller 
 {
     if (([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera] == NO)|| (controller == nil)) return NO;
     
-    UIImagePickerController *cameraUI = [[UIImagePickerController alloc] init];
-    cameraUI.sourceType = UIImagePickerControllerSourceTypeCamera;
-    cameraUI.mediaTypes = [[NSArray alloc] initWithObjects: (NSString *) kUTTypeMovie, nil];
-    cameraUI.allowsEditing = NO;
-    cameraUI.delegate = self;
-    [controller presentModalViewController: cameraUI animated: YES];
+    self.picker = [[UIImagePickerController alloc] init];
+    self.picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    self.picker.mediaTypes = [[NSArray alloc] initWithObjects: (NSString *) kUTTypeMovie, nil];
+    self.picker.allowsEditing = NO;
+    self.picker.showsCameraControls = NO;
+    self.picker.wantsFullScreenLayout = NO;
+    self.picker.delegate = self;
+    self.picker.videoQuality = UIImagePickerControllerQualityType640x480;
+    
+    UIView *overlay = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
+    self.pickerToolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 420, 320, 60)];
+    UIBarButtonItem *recordButton = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"recordbutton.png"] style:UIBarButtonItemStylePlain target:self action:@selector(recordPressed)];
+ 
+    
+    [self.pickerToolbar setItems:[NSArray arrayWithObjects: [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil], recordButton, [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],nil]];
+    [overlay addSubview:self.pickerToolbar];
+    
+    self.picker.cameraOverlayView = overlay;
+
+    self.enabledButton = YES;
+    
+    [controller presentModalViewController: self.picker animated: YES];
     return YES;
+}
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    //[self buildCameraUI];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self setCountdownTime:STANDARD_TIME];
+    //[self setCountdownTime:STANDARD_TIME];
     [self setMessage: STANDARD_MESSAGE];
 }
 
