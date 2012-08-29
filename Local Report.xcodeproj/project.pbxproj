@@ -12,6 +12,13 @@
 		F920267215D19D9400FB0417 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F920267115D19D9400FB0417 /* CFNetwork.framework */; };
 		F920267415D19DA000FB0417 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F920267315D19DA000FB0417 /* SystemConfiguration.framework */; };
 		F920267615D19DBF00FB0417 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F920267515D19DBF00FB0417 /* libz.dylib */; };
+		F933DBC715E6D54F00002254 /* DIYCam.m in Sources */ = {isa = PBXBuildFile; fileRef = F933DBBE15E6D17000002254 /* DIYCam.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F933DBC815E6D55B00002254 /* DIYCamUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = F933DBC115E6D17000002254 /* DIYCamUtilities.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F933DBCA15E6D5B000002254 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F933DBC915E6D5B000002254 /* AssetsLibrary.framework */; };
+		F933DBCC15E6D61800002254 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F933DBCB15E6D61800002254 /* CoreMedia.framework */; };
+		F933DBD115E6E4CE00002254 /* UIImage+Save.m in Sources */ = {isa = PBXBuildFile; fileRef = F933DBC615E6D43D00002254 /* UIImage+Save.m */; };
+		F933DBD215E6E4D200002254 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = F933DBC415E6D43D00002254 /* UIImage+Resize.m */; };
+		F96A6C7615E4145400A420D8 /* VideoCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F96A6C7515E4145400A420D8 /* VideoCaptureViewController.m */; };
 		F99690F915C8745F0027529B /* AudioCallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F99690F815C8745F0027529B /* AudioCallViewController.m */; };
 		F99690FD15C874810027529B /* AudioCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F99690FC15C874810027529B /* AudioCaptureViewController.m */; };
 		F9B76F2115D1C25F00B166B9 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B76F0515D1C25F00B166B9 /* ASIAuthenticationDialog.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -51,6 +58,18 @@
 		F920267115D19D9400FB0417 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		F920267315D19DA000FB0417 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F920267515D19DBF00FB0417 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		F933DBBD15E6D17000002254 /* DIYCam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DIYCam.h; sourceTree = "<group>"; };
+		F933DBBE15E6D17000002254 /* DIYCam.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DIYCam.m; sourceTree = "<group>"; };
+		F933DBBF15E6D17000002254 /* DIYCamDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DIYCamDefaults.h; sourceTree = "<group>"; };
+		F933DBC015E6D17000002254 /* DIYCamUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DIYCamUtilities.h; sourceTree = "<group>"; };
+		F933DBC115E6D17000002254 /* DIYCamUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DIYCamUtilities.m; sourceTree = "<group>"; };
+		F933DBC315E6D43D00002254 /* UIImage+Resize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		F933DBC415E6D43D00002254 /* UIImage+Resize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		F933DBC515E6D43D00002254 /* UIImage+Save.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Save.h"; sourceTree = "<group>"; };
+		F933DBC615E6D43D00002254 /* UIImage+Save.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Save.m"; sourceTree = "<group>"; };
+		F933DBC915E6D5B000002254 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		F933DBCB15E6D61800002254 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		F96A6C7515E4145400A420D8 /* VideoCaptureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoCaptureViewController.m; sourceTree = "<group>"; };
 		F99690F715C8745F0027529B /* AudioCallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioCallViewController.h; sourceTree = "<group>"; };
 		F99690F815C8745F0027529B /* AudioCallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioCallViewController.m; sourceTree = "<group>"; };
 		F99690FB15C874810027529B /* AudioCaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioCaptureViewController.h; sourceTree = "<group>"; };
@@ -118,7 +137,9 @@
 			files = (
 				F920267615D19DBF00FB0417 /* libz.dylib in Frameworks */,
 				F9B7702015D46B9300B166B9 /* AVFoundation.framework in Frameworks */,
+				F933DBCA15E6D5B000002254 /* AssetsLibrary.framework in Frameworks */,
 				F9C25EFE15D5D66700567C16 /* CoreAudio.framework in Frameworks */,
+				F933DBCC15E6D61800002254 /* CoreMedia.framework in Frameworks */,
 				F9B7701E15D46B8E00B166B9 /* AudioToolbox.framework in Frameworks */,
 				F920267415D19DA000FB0417 /* SystemConfiguration.framework in Frameworks */,
 				F920267215D19D9400FB0417 /* CFNetwork.framework in Frameworks */,
@@ -220,6 +241,8 @@
 			children = (
 				F920267515D19DBF00FB0417 /* libz.dylib */,
 				F9B7700E15D46B0F00B166B9 /* libTwilioClient.a */,
+				F933DBCB15E6D61800002254 /* CoreMedia.framework */,
+				F933DBC915E6D5B000002254 /* AssetsLibrary.framework */,
 				F9B7701F15D46B9300B166B9 /* AVFoundation.framework */,
 				F9B7701D15D46B8E00B166B9 /* AudioToolbox.framework */,
 				F920267315D19DA000FB0417 /* SystemConfiguration.framework */,
@@ -238,6 +261,16 @@
 			isa = PBXGroup;
 			children = (
 				F920223515C74201002F6721 /* Storyboard.storyboard */,
+				F933DBBD15E6D17000002254 /* DIYCam.h */,
+				F933DBBE15E6D17000002254 /* DIYCam.m */,
+				F933DBBF15E6D17000002254 /* DIYCamDefaults.h */,
+				F933DBC015E6D17000002254 /* DIYCamUtilities.h */,
+				F933DBC115E6D17000002254 /* DIYCamUtilities.m */,
+				F933DBC315E6D43D00002254 /* UIImage+Resize.h */,
+				F933DBC415E6D43D00002254 /* UIImage+Resize.m */,
+				F933DBC515E6D43D00002254 /* UIImage+Save.h */,
+				F933DBC615E6D43D00002254 /* UIImage+Save.m */,
+				F96A6C7515E4145400A420D8 /* VideoCaptureViewController.m */,
 				F99690FB15C874810027529B /* AudioCaptureViewController.h */,
 				F99690FC15C874810027529B /* AudioCaptureViewController.m */,
 				F99690F715C8745F0027529B /* AudioCallViewController.h */,
@@ -337,6 +370,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F933DBD215E6E4D200002254 /* UIImage+Resize.m in Sources */,
+				F933DBD115E6E4CE00002254 /* UIImage+Save.m in Sources */,
+				F933DBC815E6D55B00002254 /* DIYCamUtilities.m in Sources */,
+				F933DBC715E6D54F00002254 /* DIYCam.m in Sources */,
 				F9C7781F15C71FFD0017E63A /* main.m in Sources */,
 				F9C7782315C71FFD0017E63A /* LocalReportAppDelegate.m in Sources */,
 				F9C7783115C7203F0017E63A /* MainMenuViewController.m in Sources */,
@@ -354,6 +391,7 @@
 				F9B76F2915D1C25F00B166B9 /* Reachability.m in Sources */,
 				F9B76F2A15D1C25F00B166B9 /* ReachabilityAppDelegate.m in Sources */,
 				F9B7704615D4722F00B166B9 /* TwilioPhone.m in Sources */,
+				F96A6C7615E4145400A420D8 /* VideoCaptureViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

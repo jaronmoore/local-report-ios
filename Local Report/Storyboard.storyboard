@@ -193,6 +193,49 @@
             </objects>
             <point key="canvasLocation" x="1330" y="289"/>
         </scene>
+        <!--Video Capture View Controller-->
+        <scene sceneID="wup-H4-FQx">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c3L-7C-h6g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="aU7-gf-1nN" customClass="VideoCaptureViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5eJ-Kk-iDu">
+                        <rect key="frame" x="0.0" y="20" width="480" height="300"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="6JL-v6-msD">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="256"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <toolbar clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackTranslucent" id="oGC-7Y-3bq">
+                                <rect key="frame" x="-1" y="255" width="480" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="00:20" style="plain" id="ee0-5v-iqv"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ICB-EG-ZWz"/>
+                                    <barButtonItem title="RECORD" id="hwr-Nn-qeu">
+                                        <connections>
+                                            <action selector="recordPressed:" destination="aU7-gf-1nN" id="eUw-23-iR8"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Z3m-ft-1Tn"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="previewView" destination="6JL-v6-msD" id="4Lh-l1-qcG"/>
+                        <outlet property="recordButton" destination="hwr-Nn-qeu" id="xeY-xh-g5A"/>
+                        <outlet property="timerLabel" destination="ee0-5v-iqv" id="Hpo-h1-ZJw"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="309" y="-545"/>
+        </scene>
         <!--Video Uploader View Controller - Video Uploader-->
         <scene sceneID="P12-5h-Lln">
             <objects>

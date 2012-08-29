@@ -157,7 +157,7 @@
     self.picker.showsCameraControls = NO;
     self.picker.wantsFullScreenLayout = NO;
     self.picker.delegate = self;
-    self.picker.videoQuality = UIImagePickerControllerQualityType640x480;
+    self.picker.videoQuality = UIImagePickerControllerQualityTypeMedium;
     
     UIView *overlay = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
     self.pickerToolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 420, 320, 60)];
@@ -197,7 +197,7 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return YES;
 }
 
 @end
