@@ -132,10 +132,10 @@
         if (audioDevice)
         {
             NSError *error              = nil;
-            audioInput                  = [AVCaptureDeviceInput deviceInputWithDevice:audioDevice error:&error];
+            audioInput                  = nil;
             if (!error)
             {
-                [session addInput:audioInput];
+                //[session addInput:audioInput];
             } else {
                 [[self delegate] camDidFail:self withError:error];
             }
@@ -152,11 +152,13 @@
         //
         
         movieFileOutput                         = [[AVCaptureMovieFileOutput alloc] init];
+        NSDictionary *videoOutputSettings       = [[NSDictionary alloc] initWithObjectsAndKeys:VIDEO_CODEC, AVVideoCodecKey, [NSNumber numberWithInt:720], AVVideoWidthKey, [NSNumber numberWithInt:480], AVVideoHeightKey, [NSNumber numberWithInt:1500000], AVVideoAverageBitRateKey, nil];
         Float64 TotalSeconds                    = VIDEO_DURATION;			// Max seconds
         int32_t preferredTimeScale              = VIDEO_FPS;                // Frames per second
         CMTime maxDuration                      = CMTimeMakeWithSeconds(TotalSeconds, preferredTimeScale);
         movieFileOutput.maxRecordedDuration     = maxDuration;
         movieFileOutput.minFreeDiskSpaceLimit   = VIDEO_MIN_DISK;
+        [movieFileOutput setValuesForKeysWithDictionary:videoOutputSettings];
         [session addOutput:movieFileOutput];
         [self setOutputProperties];
         
