@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F906E37A15F17AE800B2DE4B /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F906E37915F17AE800B2DE4B /* CoreVideo.framework */; };
 		F920223315C7402E002F6721 /* VideoUploaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F920223215C7402E002F6721 /* VideoUploaderViewController.m */; };
 		F920223615C74201002F6721 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F920223515C74201002F6721 /* Storyboard.storyboard */; };
 		F920267215D19D9400FB0417 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F920267115D19D9400FB0417 /* CFNetwork.framework */; };
@@ -52,6 +53,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F906E37915F17AE800B2DE4B /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		F920223115C7402E002F6721 /* VideoUploaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoUploaderViewController.h; sourceTree = "<group>"; };
 		F920223215C7402E002F6721 /* VideoUploaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoUploaderViewController.m; sourceTree = "<group>"; };
 		F920223515C74201002F6721 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F906E37A15F17AE800B2DE4B /* CoreVideo.framework in Frameworks */,
 				F920267615D19DBF00FB0417 /* libz.dylib in Frameworks */,
 				F9B7702015D46B9300B166B9 /* AVFoundation.framework in Frameworks */,
 				F933DBCA15E6D5B000002254 /* AssetsLibrary.framework in Frameworks */,
@@ -222,6 +225,7 @@
 		F9C7780315C71FFC0017E63A = {
 			isa = PBXGroup;
 			children = (
+				F906E37915F17AE800B2DE4B /* CoreVideo.framework */,
 				F9C7781815C71FFD0017E63A /* Local Report */,
 				F9C7781115C71FFC0017E63A /* Frameworks */,
 				F9C7780F15C71FFC0017E63A /* Products */,

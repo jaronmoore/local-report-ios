@@ -54,9 +54,6 @@
 
 - (void)setup;
 
-#pragma mark - Photo
-
-- (void)startPhotoCapture;
 
 #pragma mark - Video
 

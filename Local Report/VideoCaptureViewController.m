@@ -21,6 +21,7 @@
 @property (strong, nonatomic)DIYCam *cam;
 
 @property NSTimeInterval time;
+@property (strong, nonatomic) NSTimer *timer;
 
 @end
 
@@ -32,6 +33,7 @@
 @synthesize cam = _cam;
 
 @synthesize time = _time;
+@synthesize timer = _timer;
 
 - (IBAction)recordPressed:(UIBarButtonItem *)sender 
 {
@@ -51,13 +53,14 @@
         self.time--;
     } else {
         [self stopRecording];
+        [self.timer invalidate];
     }
 }
 
 -(void) setUpTimerUI
 {
     self.time = 20;
-    [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateTimerLabel) userInfo:nil repeats:YES];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateTimerLabel) userInfo:nil repeats:YES];
 }
 
 - (void)camReady:(DIYCam *)cam
