@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="5aJ-EW-qP8">
     <dependencies>
+        <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
     </dependencies>
@@ -197,37 +198,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c3L-7C-h6g" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="aU7-gf-1nN" customClass="VideoCaptureViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5eJ-Kk-iDu">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="44" width="320" height="436"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="6JL-v6-msD">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="415"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                             <toolbar clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackTranslucent" id="oGC-7Y-3bq">
-                                <rect key="frame" x="-1" y="371" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="392" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="00:20" style="plain" id="ee0-5v-iqv"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ICB-EG-ZWz"/>
-                                    <barButtonItem title="RECORD" id="hwr-Nn-qeu">
+                                    <barButtonItem image="recordbutton.png" style="plain" id="hwr-Nn-qeu">
+                                        <inset key="imageInsets" minX="3" minY="5" maxX="3" maxY="1"/>
                                         <connections>
                                             <action selector="recordPressed:" destination="aU7-gf-1nN" id="eUw-23-iR8"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Z3m-ft-1Tn"/>
+                                    <barButtonItem style="plain" id="ORn-sP-tEO">
+                                        <progressView key="customView" opaque="NO" contentMode="scaleToFill" progressViewStyle="bar" id="Srg-Fi-vxa">
+                                            <rect key="frame" x="62" y="17" width="242" height="11"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </progressView>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="oBr-QE-EgU"/>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="previewView" destination="6JL-v6-msD" id="4Lh-l1-qcG"/>
                         <outlet property="recordButton" destination="hwr-Nn-qeu" id="xeY-xh-g5A"/>
-                        <outlet property="timerLabel" destination="ee0-5v-iqv" id="Hpo-h1-ZJw"/>
+                        <outlet property="timerView" destination="Srg-Fi-vxa" id="h8a-TP-taZ"/>
                         <segue destination="q0y-Js-NOh" kind="push" identifier="show upload" id="IuF-P5-b2e"/>
                     </connections>
                 </viewController>
@@ -240,7 +246,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5xk-U7-Tzf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="vidUpload" id="q0y-Js-NOh" customClass="VideoUploaderViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="az6-cb-0Ix">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="44" width="320" height="436"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <progressView opaque="NO" contentMode="scaleToFill" id="bGb-Dd-06G">
@@ -277,6 +283,9 @@
             <point key="canvasLocation" x="-53" y="-17"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="recordbutton.png" width="40" height="40"/>
+    </resources>
     <classes>
         <class className="AudioCallViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AudioCallViewController.h"/>
@@ -301,7 +310,7 @@
             <relationships>
                 <relationship kind="outlet" name="previewView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="recordButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="timerLabel" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="timerView" candidateClass="UIProgressView"/>
             </relationships>
         </class>
         <class className="VideoUploaderViewController" superclassName="UIViewController">

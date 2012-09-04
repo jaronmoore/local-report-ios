@@ -73,6 +73,12 @@
     [self uploadFileToServer];
 }
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    [self.navigationController setNavigationBarHidden:NO];
+}
+
 - (void)viewDidUnload
 {
     [self setProgressView:nil];

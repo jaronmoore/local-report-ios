@@ -16,7 +16,7 @@
 
 @property (strong, nonatomic) IBOutlet UIView *previewView;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *recordButton;
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *timerLabel;
+@property (strong, nonatomic) IBOutlet UIProgressView *timerView;
 
 @property (strong, nonatomic)DIYCam *cam;
 
@@ -28,7 +28,7 @@
 @implementation VideoCaptureViewController
 @synthesize previewView = _previewView;
 @synthesize recordButton = _recordButton;
-@synthesize timerLabel = _timerLabel;
+@synthesize timerView = _timerView;
 
 @synthesize cam = _cam;
 
@@ -49,7 +49,8 @@
 - (void)updateTimerLabel
 {
     if (self.time > 0){
-        self.timerLabel.title = [NSString stringWithFormat:@"00:" @"%g", self.time];
+        NSLog(@"%g", (20.0-self.time)/20.0);
+        [self.timerView setProgress:(float)((20.0-self.time)/20.0) animated:YES];
         self.time--;
     } else {
         [self stopRecording];
@@ -90,22 +91,10 @@
     
 }
 
-
-
-
-
--(void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackTranslucent];
-    [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationLandscapeRight animated:NO];
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
     [self.navigationController setNavigationBarHidden:YES];
     self.cam = [[DIYCam alloc] init];
     [self.cam setDelegate:self];
@@ -124,14 +113,14 @@
     [self setRecordButton:nil];
     [self setPreviewView:nil];
     [self setRecordButton:nil];
-    [self setTimerLabel:nil];
+    [self setTimerView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return YES;
+    return NO;
 }
 
 @end

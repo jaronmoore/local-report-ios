@@ -225,7 +225,6 @@
 		F9C7780315C71FFC0017E63A = {
 			isa = PBXGroup;
 			children = (
-				F906E37915F17AE800B2DE4B /* CoreVideo.framework */,
 				F9C7781815C71FFD0017E63A /* Local Report */,
 				F9C7781115C71FFC0017E63A /* Frameworks */,
 				F9C7780F15C71FFC0017E63A /* Products */,
@@ -243,6 +242,7 @@
 		F9C7781115C71FFC0017E63A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F906E37915F17AE800B2DE4B /* CoreVideo.framework */,
 				F920267515D19DBF00FB0417 /* libz.dylib */,
 				F9B7700E15D46B0F00B166B9 /* libTwilioClient.a */,
 				F933DBCB15E6D61800002254 /* CoreMedia.framework */,
