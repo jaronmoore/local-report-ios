@@ -254,21 +254,15 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <progressView opaque="NO" contentMode="scaleToFill" id="bGb-Dd-06G">
-                                <rect key="frame" x="85" y="407" width="150" height="9"/>
+                                <rect key="frame" x="85" y="213" width="150" height="9"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </progressView>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" id="02q-C6-9Bp">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="386"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Video Uploader" id="gX5-go-irH"/>
                     <connections>
-                        <outlet property="mapView" destination="02q-C6-9Bp" id="1Z4-un-8Jf"/>
                         <outlet property="progressView" destination="bGb-Dd-06G" id="AwK-1x-cKf"/>
-                        <outlet property="whitMap" destination="02q-C6-9Bp" id="G7r-x7-0jJ"/>
                     </connections>
                 </viewController>
             </objects>
