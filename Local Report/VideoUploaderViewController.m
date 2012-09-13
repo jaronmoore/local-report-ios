@@ -9,11 +9,15 @@
 #import "VideoUploaderViewController.h"
 #import "ASIHTTPRequest.h"
 #import "ASIFormDataRequest.h"
+#import <Mapkit/MapKit.h>
 
-@interface VideoUploaderViewController () <NSURLConnectionDelegate, NSURLConnectionDataDelegate>
+@interface VideoUploaderViewController () <NSURLConnectionDelegate, NSURLConnectionDataDelegate, UIAlertViewDelegate>
 @property (strong, nonatomic) NSMutableData *receivedData;
 @property (strong, nonatomic) NSString *userid;
 @property (strong, nonatomic) IBOutlet UIProgressView *progressView;
+
+@property (strong, nonatomic) IBOutlet MKMapView *mapView;
+
 @end
 
 @implementation VideoUploaderViewController
@@ -22,6 +26,7 @@
 @synthesize receivedData = _receivedData;
 @synthesize userid = _userid;
 @synthesize progressView = _progressView;
+@synthesize mapView = _mapView;
 @synthesize audioOrVideo = _audioOrVideo;
 
 #define UPLOAD_URL @"http://23.23.89.21:8080/post.php"
@@ -60,11 +65,16 @@
     NSData *responseData = [request responseData];
     NSLog(@"%@", responseData);
 }
-
+-(void)alertViewCancel:(UIAlertView *)alertView
+{
+    [self uploadFileToServer];
+}
 - (void)requestFailed:(ASIHTTPRequest *)request
 {
     NSError *error = [request error];
     NSLog(@"%@", error);
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops..." message:@"There was an error uploading your video, but we're trying again" delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
+    [alert show];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -76,12 +86,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:YES];
     [self.navigationController setNavigationBarHidden:NO];
 }
 
 - (void)viewDidUnload
 {
     [self setProgressView:nil];
+    [self setMapView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }

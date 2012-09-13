@@ -10,6 +10,7 @@
 #import "AVFoundation/AVFoundation.h"
 #import "DIYCam.h"
 #import "VideoUploaderViewController.h"
+#import "DIYCamDefaults.h"
 
 @interface VideoCaptureViewController () <DIYCamDelegate>
 
@@ -35,6 +36,8 @@
 @synthesize time = _time;
 @synthesize timer = _timer;
 
+@synthesize networkstatus = _networkstatus;
+
 - (IBAction)recordPressed:(UIBarButtonItem *)sender 
 {
     [self.cam startVideoCapture];
@@ -49,7 +52,7 @@
 - (void)updateTimerLabel
 {
     if (self.time > 0){
-        NSLog(@"%g", (20.0-self.time)/20.0);
+
         [self.timerView setProgress:(float)((20.0-self.time)/20.0) animated:YES];
         self.time--;
     } else {
@@ -91,14 +94,29 @@
     
 }
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
     [self.navigationController setNavigationBarHidden:YES];
     self.cam = [[DIYCam alloc] init];
+    switch (self.networkstatus) {
+        case NotReachable:
+            //alert
+            break;
+        case ReachableViaWiFi:
+            self.cam.frameRate = [NSNumber numberWithInt:WIFI_BITRATE];
+            break;
+        case ReachableViaWWAN:
+            self.cam.frameRate = [NSNumber numberWithInt:NETWORK_BITRATE];
+            break;
+        default:
+            break;
+    }
     [self.cam setDelegate:self];
     [self.cam setup];
+    
     self.cam.preview.frame  = self.previewView.frame;
     [self.view.layer addSublayer:self.cam.preview];
     

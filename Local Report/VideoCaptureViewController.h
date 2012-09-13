@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Reachability.h"
 
 @interface VideoCaptureViewController : UIViewController
+
+@property NetworkStatus networkstatus;
 
 @end

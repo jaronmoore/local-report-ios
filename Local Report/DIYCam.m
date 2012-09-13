@@ -19,6 +19,7 @@
 @property (atomic, retain) ALAssetsLibrary *library;
 
 @property (atomic, retain) NSOperationQueue *queue;
+@property (nonatomic) dispatch_queue_t queue_t;
 @end
 
 //
@@ -36,9 +37,25 @@
 @synthesize videoInput = _videoInput;
 @synthesize library;
 @synthesize queue;
+@synthesize queue_t = _queue_t;
+@synthesize frameRate = _frameRate;
 
 #pragma mark - Init
 
+-(dispatch_queue_t)queue_t
+{
+    if(!_queue_t){
+        _queue_t = dispatch_queue_create("MyQueue", NULL);
+    }
+    return _queue_t;
+}
+-(NSNumber *)frameRate
+{
+    if(!_frameRate){
+        _frameRate = [[NSNumber alloc]init];
+    }
+    return _frameRate;
+}
 - (AVAssetWriter *)assetWriter
 {
     if(!_assetWriter){
@@ -192,8 +209,7 @@
         [self startSession];
         [[self delegate] camReady:self];
         
-        dispatch_queue_t queue = dispatch_queue_create("MyQueue", NULL);
-        [self.movieOutput setSampleBufferDelegate:self queue:queue];
+        [self.movieOutput setSampleBufferDelegate:self queue:self.queue_t];
 
     }
 }
@@ -219,9 +235,9 @@
 
 - (BOOL)setupWriter
 {
-    NSDictionary *codecSettings = [[NSDictionary alloc] initWithObjectsAndKeys:[NSNumber numberWithInt:1500000],AVVideoAverageBitRateKey, nil];
+    NSDictionary *codecSettings = [[NSDictionary alloc] initWithObjectsAndKeys:self.frameRate, AVVideoAverageBitRateKey, nil];
     
-    NSDictionary *videoOutputSettings       = [[NSDictionary alloc] initWithObjectsAndKeys:VIDEO_CODEC, AVVideoCodecKey, [NSNumber numberWithInt:720], AVVideoWidthKey, [NSNumber numberWithInt:480], AVVideoHeightKey, codecSettings, AVVideoCompressionPropertiesKey, nil];
+    NSDictionary *videoOutputSettings       = [[NSDictionary alloc] initWithObjectsAndKeys:VIDEO_CODEC, AVVideoCodecKey, [NSNumber numberWithInt:VIDEO_HEIGHT], AVVideoWidthKey, [NSNumber numberWithInt:VIDEO_WIDTH], AVVideoHeightKey, codecSettings, AVVideoCompressionPropertiesKey, nil];
     self.videoInput = [[AVAssetWriterInput alloc] initWithMediaType:AVMediaTypeVideo outputSettings:videoOutputSettings];
     self.videoInput.expectsMediaDataInRealTime = YES;
     

@@ -49,6 +49,7 @@
 @property (nonatomic, retain) AVCaptureSession *session;
 @property (nonatomic, assign) AVCaptureVideoPreviewLayer *preview;
 @property (nonatomic, assign) BOOL isRecording;
+@property (nonatomic, strong) NSNumber *frameRate;
 
 #pragma mark - Setup
 
