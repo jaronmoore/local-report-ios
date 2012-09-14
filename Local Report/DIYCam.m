@@ -489,7 +489,11 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
                 NSLog(@"Error: %@", self.assetWriter.error);
             return;
         }
-        
+        while (self.videoInput.readyForMoreMediaData == FALSE) {
+            NSDate *maxDate = [NSDate dateWithTimeIntervalSinceNow:0.1];
+            [[NSRunLoop currentRunLoop] runUntilDate:maxDate];
+        }
+
         if( ![self.videoInput appendSampleBuffer:sampleBuffer] )
             NSLog(@"Unable to write to video input");
         
