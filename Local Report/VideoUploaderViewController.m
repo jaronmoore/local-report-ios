@@ -15,8 +15,9 @@
 @property (strong, nonatomic) NSMutableData *receivedData;
 @property (strong, nonatomic) NSString *userid;
 @property (strong, nonatomic) IBOutlet UIProgressView *progressView;
+@property (strong, nonatomic) ASIFormDataRequest *request;
+@property (strong, nonatomic) CLLocationManager *locationManager;
 
-@property (strong, nonatomic) IBOutlet MKMapView *mapView;
 
 @end
 
@@ -26,8 +27,10 @@
 @synthesize receivedData = _receivedData;
 @synthesize userid = _userid;
 @synthesize progressView = _progressView;
-@synthesize mapView = _mapView;
 @synthesize audioOrVideo = _audioOrVideo;
+@synthesize request = _request;
+@synthesize locationManager = _locationManager;
+
 
 #define UPLOAD_URL @"http://23.23.89.21:8080/post.php"
 
@@ -38,22 +41,28 @@
     }
     return _videoData;
 }
+- (IBAction)cancelButtonPushed:(id)sender 
+{
+    [self.request cancel];
+}
 
 - (void)uploadFileToServer
 {
     // Create the request.
     NSURL *uploadURL = [NSURL URLWithString:UPLOAD_URL];
-    ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:uploadURL];
+    self.request = [ASIFormDataRequest requestWithURL:uploadURL];
     //[request setData:self.videoData forKey:@"file"];
-    [request setData:self.videoData withFileName:@"iPhoneVideo.mp4" andContentType:@"application/octet-stream" forKey:@"file"];
-    [request setPostValue:@"1" forKey:@"participant_id"];
-    [request setPostValue:self.audioOrVideo forKey:@"audio_or_video"];
-    [request setPostValue:@"true" forKey:@"form_submitted"];
+    [self.request setData:self.videoData withFileName:@"iPhoneVideo.mp4" andContentType:@"application/octet-stream" forKey:@"file"];
+    [self.request setPostValue:self.userid forKey:@"participant_device_id"];
+    [self.request setPostValue:self.audioOrVideo forKey:@"audio_or_video"];
+    [self.request setPostValue:@"true" forKey:@"form_submitted"];
+    [self.request setPostValue:[NSString stringWithFormat:@"%g", self.locationManager.location.coordinate.latitude] forKey:@"latitude"];
+    [self.request setPostValue:[NSString stringWithFormat:@"%g", self.locationManager.location.coordinate.longitude] forKey:@"longitude"];
 
-    [request setDelegate:self];
-    [request setUploadProgressDelegate:self.progressView];
-    request.showAccurateProgress = YES;
-    [request startAsynchronous];
+    [self.request setDelegate:self];
+    [self.request setUploadProgressDelegate:self.progressView];
+    self.request.showAccurateProgress = YES;
+    [self.request startAsynchronous];
 }
 
 - (void)requestFinished:(ASIHTTPRequest *)request
@@ -65,21 +74,32 @@
     NSData *responseData = [request responseData];
     NSLog(@"%@", responseData);
 }
--(void)alertViewCancel:(UIAlertView *)alertView
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     [self uploadFileToServer];
+}
+-(void)alertViewCancel:(UIAlertView *)alertView
+{
+    
 }
 - (void)requestFailed:(ASIHTTPRequest *)request
 {
     NSError *error = [request error];
     NSLog(@"%@", error);
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops..." message:@"There was an error uploading your video, but we're trying again" delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops..." message:@"There was an error uploading your video" delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:@"Try Again", nil];
     [alert show];
+}
+
+- (void) getUserId
+{
+    NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
+    self.userid = [defaults objectForKey:@"unique"];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    [self.locationManager startUpdatingLocation];
     [self uploadFileToServer];
 }
 
@@ -88,12 +108,12 @@
     [super viewDidLoad];
     [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:YES];
     [self.navigationController setNavigationBarHidden:NO];
+    [self getUserId];
 }
 
 - (void)viewDidUnload
 {
     [self setProgressView:nil];
-    [self setMapView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }

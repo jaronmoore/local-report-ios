@@ -16,6 +16,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.phone = [[TwilioPhone alloc] init];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    if(![defaults objectForKey:@"unique"]){
+        CFStringRef unique = CFUUIDCreateString(CFAllocatorGetDefault(), CFUUIDCreate(CFAllocatorGetDefault()));
+        NSString *uniqueid = (__bridge_transfer NSString*) unique;
+        [defaults setObject:uniqueid forKey:@"unique"];
+    } 
     return YES;
 }
 							

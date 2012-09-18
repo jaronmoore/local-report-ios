@@ -11,7 +11,7 @@
 #import "VideoCaptureViewController.h"
 #import <MobileCoreServices/UTCoreTypes.h>
 #import "Reachability.h"
-
+#import <MapKit/Mapkit.h>
 
 
 @interface MainMenuViewController ()  <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
@@ -62,6 +62,7 @@
     }
 }
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -69,6 +70,7 @@
     [self setMessage: STANDARD_MESSAGE];
     Reachability *network = [Reachability reachabilityWithHostName: @"www.whitmanlocalreport.net"];
     self.networkstatus = [network currentReachabilityStatus];
+    
 }
 
 - (void)viewDidUnload
