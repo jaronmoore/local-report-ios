@@ -490,6 +490,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "EE35C7C6-4B9D-45A1-A5D4-4FB4CD6B8902";
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = "${SDK_DIR}/usr/include/libxml2";
+				VALID_ARCHS = "armv7 ";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -521,6 +522,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "FE89345E-DA1F-40A4-8C7A-B2D6D7FC7283";
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = "${SDK_DIR}/usr/include/libxml2";
+				VALID_ARCHS = armv7;
+				"VALID_ARCHS[sdk=*]" = "armv7 ";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

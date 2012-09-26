@@ -12,6 +12,29 @@
 
 @synthesize window = _window;
 @synthesize phone = _phone;
+@synthesize locationManager = _locationManager;
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    NSDate* eventDate = newLocation.timestamp;
+    NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
+    if (abs(howRecent) < 15.0)
+    {
+        //Location timestamp is within the last 15.0 seconds, let's use it!
+        if(newLocation.horizontalAccuracy < 35.0){
+            //Location seems pretty accurate, let's use it!
+            NSLog(@"latitude %+.6f, longitude %+.6f\n",
+                  newLocation.coordinate.latitude,
+                  newLocation.coordinate.longitude);
+            NSLog(@"Horizontal Accuracy:%f", newLocation.horizontalAccuracy);
+            
+            //Optional: turn off location services once we've gotten a good location
+            [manager stopUpdatingLocation];
+        }
+    }
+}
+
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -23,7 +46,23 @@
         CFStringRef unique = CFUUIDCreateString(CFAllocatorGetDefault(), CFUUIDCreate(CFAllocatorGetDefault()));
         NSString *uniqueid = (__bridge_transfer NSString*) unique;
         [defaults setObject:uniqueid forKey:@"unique"];
-    } 
+    }
+    
+    if(self.locationManager==nil){
+        _locationManager=[[CLLocationManager alloc] init];
+        //I'm using ARC with this project so no need to release
+        
+        _locationManager.delegate=self;
+        _locationManager.purpose = @"To document where the reports are taking place";
+        _locationManager.desiredAccuracy=kCLLocationAccuracyBest;
+        _locationManager.distanceFilter=500;
+        self.locationManager=_locationManager;
+    }
+    
+    if([CLLocationManager locationServicesEnabled]){
+        [self.locationManager startUpdatingLocation];
+    }
+    
     return YES;
 }
 							

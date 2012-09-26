@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "TwilioPhone.h"
+#import <Mapkit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface LocalReportAppDelegate : UIResponder <UIApplicationDelegate>
+@interface LocalReportAppDelegate : UIResponder <UIApplicationDelegate, CLLocationManagerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) TwilioPhone *phone;
+@property (strong, nonatomic) CLLocationManager *locationManager;
 
 @end

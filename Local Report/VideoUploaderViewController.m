@@ -9,14 +9,14 @@
 #import "VideoUploaderViewController.h"
 #import "ASIHTTPRequest.h"
 #import "ASIFormDataRequest.h"
-#import <Mapkit/MapKit.h>
+#import "LocalReportAppDelegate.h"
 
 @interface VideoUploaderViewController () <NSURLConnectionDelegate, NSURLConnectionDataDelegate, UIAlertViewDelegate>
 @property (strong, nonatomic) NSMutableData *receivedData;
 @property (strong, nonatomic) NSString *userid;
 @property (strong, nonatomic) IBOutlet UIProgressView *progressView;
 @property (strong, nonatomic) ASIFormDataRequest *request;
-@property (strong, nonatomic) CLLocationManager *locationManager;
+
 
 
 @end
@@ -29,7 +29,7 @@
 @synthesize progressView = _progressView;
 @synthesize audioOrVideo = _audioOrVideo;
 @synthesize request = _request;
-@synthesize locationManager = _locationManager;
+
 
 
 #define UPLOAD_URL @"http://23.23.89.21:8080/post.php"
@@ -48,6 +48,7 @@
 
 - (void)uploadFileToServer
 {
+
     // Create the request.
     NSURL *uploadURL = [NSURL URLWithString:UPLOAD_URL];
     self.request = [ASIFormDataRequest requestWithURL:uploadURL];
@@ -56,9 +57,15 @@
     [self.request setPostValue:self.userid forKey:@"participant_device_id"];
     [self.request setPostValue:self.audioOrVideo forKey:@"audio_or_video"];
     [self.request setPostValue:@"true" forKey:@"form_submitted"];
-    [self.request setPostValue:[NSString stringWithFormat:@"%g", self.locationManager.location.coordinate.latitude] forKey:@"latitude"];
-    [self.request setPostValue:[NSString stringWithFormat:@"%g", self.locationManager.location.coordinate.longitude] forKey:@"longitude"];
-
+    if([CLLocationManager locationServicesEnabled]){
+        
+        LocalReportAppDelegate *appDelegate= (LocalReportAppDelegate *)[UIApplication sharedApplication].delegate;
+        CLLocation *currentLocation=appDelegate.locationManager.location;
+        
+        //Do what you want with the location...
+    [self.request setPostValue:[NSString stringWithFormat:@"%g", currentLocation.coordinate.latitude] forKey:@"latitude"];
+    [self.request setPostValue:[NSString stringWithFormat:@"%g", currentLocation.coordinate.longitude] forKey:@"longitude"];
+    }
     [self.request setDelegate:self];
     [self.request setUploadProgressDelegate:self.progressView];
     self.request.showAccurateProgress = YES;
@@ -99,7 +106,6 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self.locationManager startUpdatingLocation];
     [self uploadFileToServer];
 }
 
@@ -120,7 +126,7 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return YES;
+    return NO;
 }
 
 @end
