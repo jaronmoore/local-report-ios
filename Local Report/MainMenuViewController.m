@@ -24,7 +24,6 @@
 
 @implementation MainMenuViewController
 @synthesize timerLabel = _timerLabel;
-@synthesize messagesLabel = _messagesLabel;
 
 @synthesize time = _time;
 @synthesize networkstatus = _networkstatus;
@@ -47,14 +46,6 @@
     [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateTimerLabel:) userInfo:self.timerLabel repeats:YES];
 }
 
-- (void)setMessage:(NSString *)message
-{
-    self.messagesLabel.text = message;
-    self.messagesLabel.layer.borderColor = [UIColor blackColor].CGColor;
-    self.messagesLabel.layer.borderWidth = 2.0;
-
-}
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString: @"showVideoRecorder"]) {
@@ -66,8 +57,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //[self setCountdownTime:STANDARD_TIME];
-    [self setMessage: STANDARD_MESSAGE];
     Reachability *network = [Reachability reachabilityWithHostName: @"www.whitmanlocalreport.net"];
     self.networkstatus = [network currentReachabilityStatus];
     
@@ -76,7 +65,6 @@
 - (void)viewDidUnload
 {
     [self setTimerLabel:nil];
-    [self setMessagesLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }

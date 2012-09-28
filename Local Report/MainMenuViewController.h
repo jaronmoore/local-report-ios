@@ -12,11 +12,7 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *timerLabel;
 
-@property (strong, nonatomic) IBOutlet UILabel *messagesLabel;
-
 -(void)setCountdownTime:(NSTimeInterval)time;
-
--(void)setMessage:(NSString *)message;
 
 
 @end

@@ -1,32 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="5aJ-EW-qP8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="5aJ-EW-qP8">
     <dependencies>
-        <deployment defaultVersion="1296" identifier="iOS"/>
-        <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
     </dependencies>
     <scenes>
         <!--Main Menu View Controller - Main Menu-->
         <scene sceneID="ulL-uK-U6m">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5ET-9a-pSu" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="ZVA-sx-PZO" customClass="MainMenuViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wDy-Q7-Hlc">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Welcome to Local Report 2012" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Ixw-Jm-kQZ">
-                                <rect key="frame" x="42" y="20" width="236" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AYI-dC-ARa">
-                                <rect key="frame" x="104" y="113" width="112" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="AYI-dC-ARa">
+                                <rect key="frame" x="20" y="344" width="112" height="87"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Shoot Video">
+                                <state key="normal" title="Shoot Video" image="shoot.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -37,11 +27,11 @@
                                     <segue destination="aU7-gf-1nN" kind="push" identifier="showVideoRecorder" id="F4S-se-xqk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2TV-YR-1xk">
-                                <rect key="frame" x="90" y="189" width="141" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2TV-YR-1xk">
+                                <rect key="frame" x="188" y="344" width="112" height="87"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Make Audio Call">
+                                <state key="normal" title="Make Audio Call" image="call.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -52,39 +42,62 @@
                                     <segue destination="wLX-0G-TVu" kind="push" id="TY8-m1-edt"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="5Fo-xQ-4Ax">
-                                <rect key="frame" x="20" y="319" width="280" height="49"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="title.png" id="mvf-LE-6S7">
+                                <rect key="frame" x="25" y="16" width="270" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bobbywhits.png" id="U4n-B1-A4B">
+                                <rect key="frame" x="135" y="68" width="165" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="worldmap.png" id="vG9-bm-WDu">
+                                <rect key="frame" x="-39" y="99" width="387" height="243"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="SHOOT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="i86-1L-LdT">
+                                <rect key="frame" x="46" y="419" width="61" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="DIAL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bqk-rK-BMV">
+                                <rect key="frame" x="225" y="418" width="38" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.71764705882352942" green="0.77254901960784317" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Main Menu" id="ERa-PN-rml"/>
-                    <connections>
-                        <outlet property="messagesLabel" destination="5Fo-xQ-4Ax" id="64T-zQ-JD0"/>
-                        <outlet property="timerLabel" destination="Ixw-Jm-kQZ" id="aTF-wo-Seg"/>
-                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5ET-9a-pSu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="415" y="-11"/>
         </scene>
         <!--Audio Call View Controller - Audio Call-->
         <scene sceneID="ccQ-4g-zdO">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RAk-kz-HKk" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="wLX-0G-TVu" customClass="AudioCallViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D3q-6i-86d">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GsC-hc-51j">
-                                <rect key="frame" x="56" y="231" width="72" height="37"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="worldmap.png" id="6nZ-1q-3kl">
+                                <rect key="frame" x="-62" y="26" width="652" height="408"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="dropback.png" id="9IK-LE-eRL">
+                                <rect key="frame" x="0.0" y="132" width="330" height="196"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="GsC-hc-51j">
+                                <rect key="frame" x="20" y="172" width="110" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Call">
+                                <state key="normal" title="Call" image="shootstart.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -95,11 +108,11 @@
                                     <action selector="dialButtonPressed:" destination="wLX-0G-TVu" eventType="touchUpInside" id="5Fb-EP-6BV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oy9-ci-k4Z">
-                                <rect key="frame" x="185" y="231" width="80" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oy9-ci-k4Z">
+                                <rect key="frame" x="190" y="172" width="110" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Hangup">
+                                <state key="normal" title="Hangup" image="hangup.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -110,23 +123,22 @@
                                     <action selector="hangupButtonPressed:" destination="wLX-0G-TVu" eventType="touchUpInside" id="UUf-os-8pg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5bw-xE-MJe">
-                                <rect key="frame" x="56" y="310" width="209" height="37"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="DIAL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="V7o-wn-jGP">
+                                <rect key="frame" x="56" y="238" width="38" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Record and Upload Audio">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="urm-UP-PG9" kind="push" id="eoa-dQ-E4B"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="HANGUP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="n1v-fq-kJS">
+                                <rect key="frame" x="207" y="238" width="76" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.71764705880000002" green="0.7725490196" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Audio Call" id="Vtm-at-F1a"/>
                     <connections>
@@ -134,6 +146,7 @@
                         <outlet property="hangupButoon" destination="oy9-ci-k4Z" id="iLw-Fm-2R2"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RAk-kz-HKk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="885" y="281"/>
         </scene>
@@ -143,7 +156,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hWe-Z4-sI0" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="urm-UP-PG9" customClass="AudioCaptureViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hGY-vQ-pox">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ul6-fl-a93">
@@ -199,19 +212,18 @@
         <!--Video Capture View Controller-->
         <scene sceneID="wup-H4-FQx">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c3L-7C-h6g" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="aU7-gf-1nN" customClass="VideoCaptureViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5eJ-Kk-iDu">
-                        <rect key="frame" x="0.0" y="44" width="320" height="436"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="6JL-v6-msD">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="458"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
-                            <toolbar clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackTranslucent" id="oGC-7Y-3bq">
-                                <rect key="frame" x="0.0" y="392" width="320" height="44"/>
+                            <toolbar clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" id="oGC-7Y-3bq">
+                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem image="recordbutton.png" style="plain" id="hwr-Nn-qeu">
@@ -224,7 +236,9 @@
                                         <progressView key="customView" opaque="NO" contentMode="scaleToFill" progressViewStyle="bar" id="Srg-Fi-vxa">
                                             <rect key="frame" x="62" y="17" width="242" height="11"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="trackTintColor" red="0.71764705880000002" green="0.7725490196" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                         </progressView>
+                                        <color key="tintColor" red="0.71764705880000002" green="0.7725490196" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
@@ -241,28 +255,37 @@
                         <segue destination="q0y-Js-NOh" kind="push" identifier="show upload" id="IuF-P5-b2e"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c3L-7C-h6g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="415" y="-586"/>
         </scene>
         <!--Video Uploader View Controller - Video Uploader-->
         <scene sceneID="P12-5h-Lln">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5xk-U7-Tzf" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="vidUpload" id="q0y-Js-NOh" customClass="VideoUploaderViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="az6-cb-0Ix">
-                        <rect key="frame" x="0.0" y="44" width="320" height="436"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <progressView opaque="NO" contentMode="scaleToFill" id="bGb-Dd-06G">
-                                <rect key="frame" x="85" y="213" width="150" height="9"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="worldmap.png" id="rHa-Ut-WUk">
+                                <rect key="frame" x="-61" y="14" width="652" height="408"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="dropback.png" id="YfE-TZ-RSS">
+                                <rect key="frame" x="-1" y="135" width="321" height="190"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" id="bGb-Dd-06G">
+                                <rect key="frame" x="64" y="206" width="191" height="9"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="progressTintColor" red="1" green="0.0" blue="0.01085100634" alpha="1" colorSpace="calibratedRGB"/>
                             </progressView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KfT-nq-ZeC">
-                                <rect key="frame" x="85" y="230" width="150" height="37"/>
+                                <rect key="frame" x="85" y="227" width="150" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Cancel">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" title="CANCEL">
+                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -273,21 +296,22 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.71764705880000002" green="0.7725490196" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Video Uploader" id="gX5-go-irH"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
                     <connections>
                         <outlet property="progressView" destination="bGb-Dd-06G" id="AwK-1x-cKf"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5xk-U7-Tzf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="885" y="-280"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ils-fa-sGp">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8t5-ld-dOq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController id="5aJ-EW-qP8" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="5aJ-EW-qP8" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="KW9-TA-nMf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -298,12 +322,21 @@
                         <segue destination="ZVA-sx-PZO" kind="relationship" relationship="rootViewController" id="Ymp-vl-Xsf"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8t5-ld-dOq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-53" y="-17"/>
         </scene>
     </scenes>
     <resources>
+        <image name="bobbywhits.png" width="687" height="96"/>
+        <image name="call.png" width="364" height="309"/>
+        <image name="dropback.png" width="1334" height="923"/>
+        <image name="hangup.png" width="315" height="288"/>
         <image name="recordbutton.png" width="40" height="40"/>
+        <image name="shoot.png" width="364" height="309"/>
+        <image name="shootstart.png" width="315" height="288"/>
+        <image name="title.png" width="1123" height="181"/>
+        <image name="worldmap.png" width="1598" height="1110"/>
     </resources>
     <classes>
         <class className="AudioCallViewController" superclassName="UIViewController">
@@ -324,7 +357,6 @@
         <class className="MainMenuViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MainMenuViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="messagesLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="timerLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
@@ -339,7 +371,6 @@
         <class className="VideoUploaderViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/VideoUploaderViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
                 <relationship kind="outlet" name="progressView" candidateClass="UIProgressView"/>
             </relationships>
         </class>

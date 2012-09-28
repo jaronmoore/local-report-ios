@@ -18,7 +18,7 @@
 @property (strong, nonatomic) IBOutlet UIView *previewView;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *recordButton;
 @property (strong, nonatomic) IBOutlet UIProgressView *timerView;
-
+@property (weak, nonatomic) NSString *assetPath;
 @property (strong, nonatomic)DIYCam *cam;
 
 @property NSTimeInterval time;
@@ -37,6 +37,7 @@
 @synthesize timer = _timer;
 
 @synthesize networkstatus = _networkstatus;
+@synthesize assetPath = _assetPath;
 
 - (IBAction)recordPressed:(UIBarButtonItem *)sender 
 {
@@ -86,12 +87,14 @@
     
 }
 - (void)camCaptureComplete:(DIYCam *)cam withAsset:(NSDictionary *)asset{
-    NSString *assetPath = [asset objectForKey:@"path"];
+    self.assetPath = [asset objectForKey:@"path"];
+    [self performSegueWithIdentifier:@"show upload" sender:self];
+ /*
     VideoUploaderViewController *vuvc =[self.storyboard instantiateViewControllerWithIdentifier:@"vidUpload"];
     vuvc.videoData = [NSData dataWithContentsOfURL:[NSURL URLWithString:assetPath]];
     vuvc.audioOrVideo = @"video";
     [self.navigationController pushViewController:vuvc animated:NO];
-    
+   */
 }
 
 
@@ -134,6 +137,13 @@
     [self setTimerView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"show upload"]) {
+        ((VideoUploaderViewController*)segue.destinationViewController).videoData = [NSData dataWithContentsOfURL:[NSURL URLWithString:self.assetPath]];
+    }
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
