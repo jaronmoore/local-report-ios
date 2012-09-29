@@ -16,6 +16,7 @@
 		F9097003161668AD00500A25 /* shootstart.png in Resources */ = {isa = PBXBuildFile; fileRef = F9097002161668AD00500A25 /* shootstart.png */; };
 		F90970051616690200500A25 /* hangup.png in Resources */ = {isa = PBXBuildFile; fileRef = F90970041616690200500A25 /* hangup.png */; };
 		F909700716166D5400500A25 /* dropback.png in Resources */ = {isa = PBXBuildFile; fileRef = F909700616166D5400500A25 /* dropback.png */; };
+		F90970141617A2B200500A25 /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = F90970131617A2B100500A25 /* cancel.png */; };
 		F920223315C7402E002F6721 /* VideoUploaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F920223215C7402E002F6721 /* VideoUploaderViewController.m */; };
 		F920223615C74201002F6721 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F920223515C74201002F6721 /* Storyboard.storyboard */; };
 		F920267215D19D9400FB0417 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F920267115D19D9400FB0417 /* CFNetwork.framework */; };
@@ -72,6 +73,7 @@
 		F9097002161668AD00500A25 /* shootstart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shootstart.png; sourceTree = "<group>"; };
 		F90970041616690200500A25 /* hangup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hangup.png; sourceTree = "<group>"; };
 		F909700616166D5400500A25 /* dropback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropback.png; sourceTree = "<group>"; };
+		F90970131617A2B100500A25 /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
 		F920223115C7402E002F6721 /* VideoUploaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoUploaderViewController.h; sourceTree = "<group>"; };
 		F920223215C7402E002F6721 /* VideoUploaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoUploaderViewController.m; sourceTree = "<group>"; };
 		F920223515C74201002F6721 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
@@ -313,6 +315,7 @@
 				F9B7704515D4722D00B166B9 /* TwilioPhone.m */,
 				F9096FFE161663C200500A25 /* bobbywhits.png */,
 				F9096FFA1616625800500A25 /* call.png */,
+				F90970131617A2B100500A25 /* cancel.png */,
 				F909700616166D5400500A25 /* dropback.png */,
 				F90970041616690200500A25 /* hangup.png */,
 				F9096FF71616610700500A25 /* shoot.png */,
@@ -406,6 +409,7 @@
 				F9097003161668AD00500A25 /* shootstart.png in Resources */,
 				F90970051616690200500A25 /* hangup.png in Resources */,
 				F909700716166D5400500A25 /* dropback.png in Resources */,
+				F90970141617A2B200500A25 /* cancel.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

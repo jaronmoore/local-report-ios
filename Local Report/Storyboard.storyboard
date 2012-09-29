@@ -272,20 +272,19 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="dropback.png" id="YfE-TZ-RSS">
-                                <rect key="frame" x="-1" y="135" width="321" height="190"/>
+                                <rect key="frame" x="0.0" y="135" width="321" height="190"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <progressView opaque="NO" contentMode="scaleToFill" id="bGb-Dd-06G">
-                                <rect key="frame" x="64" y="206" width="191" height="9"/>
+                                <rect key="frame" x="20" y="225" width="280" height="9"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="progressTintColor" red="1" green="0.0" blue="0.01085100634" alpha="1" colorSpace="calibratedRGB"/>
                             </progressView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="KfT-nq-ZeC">
-                                <rect key="frame" x="85" y="227" width="150" height="37"/>
+                                <rect key="frame" x="-1" y="334" width="98" height="88"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0024831927468617291" green="0.17730405722041045" blue="0.80000000000000004" alpha="0.14000000000000001" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                <state key="normal" title="CANCEL">
+                                <state key="normal" title="CANCEL" image="cancel.png">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -293,6 +292,20 @@
                                     <action selector="cancelButtonPushed:" destination="q0y-Js-NOh" eventType="touchUpInside" id="2Av-jI-nlw"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="CANCEL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="urW-Jg-EDI">
+                                <rect key="frame" x="14" y="411" width="69" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="TRANSFERRING..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vpa-oN-7D0">
+                                <rect key="frame" x="20" y="196" width="144" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.71764705880000002" green="0.7725490196" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -300,6 +313,7 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
                     <connections>
                         <outlet property="progressView" destination="bGb-Dd-06G" id="AwK-1x-cKf"/>
+                        <outlet property="transferProgress" destination="Vpa-oN-7D0" id="x5b-hn-KqD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5xk-U7-Tzf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -328,6 +342,7 @@
     <resources>
         <image name="bobbywhits.png" width="687" height="96"/>
         <image name="call.png" width="364" height="309"/>
+        <image name="cancel.png" width="315" height="288"/>
         <image name="dropback.png" width="1334" height="923"/>
         <image name="hangup.png" width="315" height="288"/>
         <image name="recordbutton.png" width="40" height="40"/>
@@ -340,6 +355,8 @@
         <class className="AudioCallViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AudioCallViewController.h"/>
             <relationships>
+                <relationship kind="action" name="dialButtonPressed:" candidateClass="UIButton"/>
+                <relationship kind="action" name="hangupButtonPressed:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="callButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="hangupButoon" candidateClass="UIButton"/>
             </relationships>
@@ -369,7 +386,9 @@
         <class className="VideoUploaderViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/VideoUploaderViewController.h"/>
             <relationships>
+                <relationship kind="action" name="cancelButtonPushed:"/>
                 <relationship kind="outlet" name="progressView" candidateClass="UIProgressView"/>
+                <relationship kind="outlet" name="transferProgress" candidateClass="UILabel"/>
             </relationships>
         </class>
     </classes>

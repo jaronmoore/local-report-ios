@@ -16,6 +16,7 @@
 @property (strong, nonatomic) NSString *userid;
 @property (strong, nonatomic) IBOutlet UIProgressView *progressView;
 @property (strong, nonatomic) ASIFormDataRequest *request;
+@property (weak, nonatomic) IBOutlet UILabel *transferProgress;
 
 
 
@@ -75,11 +76,12 @@
 - (void)requestFinished:(ASIHTTPRequest *)request
 {
     // Use when fetching text data
-    NSString *responseString = [request responseString];
-    NSLog(@"%@", responseString);
+    //NSString *responseString = [request responseString];
+    [self.transferProgress setText:@"Done"];
+    //NSLog(@"%@", responseString);
     // Use when fetching binary data
-    NSData *responseData = [request responseData];
-    NSLog(@"%@", responseData);
+    //NSData *responseData = [request responseData];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
@@ -113,13 +115,13 @@
 {
     [super viewDidLoad];
     [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:YES];
-    [self.navigationController setNavigationBarHidden:NO];
     [self getUserId];
 }
 
 - (void)viewDidUnload
 {
     [self setProgressView:nil];
+    [self setTransferProgress:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }

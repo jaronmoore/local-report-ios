@@ -198,11 +198,11 @@
         // ---------------------------------
         preview = [AVCaptureVideoPreviewLayer layerWithSession:session];
         preview.videoGravity    = AVLayerVideoGravityResizeAspectFill;
-        if (ORIENTATION_FORCE) {
-            preview.orientation = ORIENTATION_OVERRIDE;
-        } else {
-            preview.orientation = [[UIDevice currentDevice] orientation];
-        }
+        //if (ORIENTATION_FORCE) {
+        //[preview setVideoOrientation: ORIENTATION_OVERRIDE];
+        //} else {
+        //    preview.orientation = [[UIDevice currentDevice] orientation];
+        //}
         
         // Start session
         // ---------------------------------
@@ -273,8 +273,9 @@
     if (session != nil && self.isRecording)
     {
         [self setIsRecording:false];
-        [self.assetWriter finishWriting];
-        [self writeVideoToFileSystem:self.assetWriter.outputURL];
+        [self.assetWriter finishWritingWithCompletionHandler:^{
+           [self writeVideoToFileSystem:self.assetWriter.outputURL]; 
+        }];
     }
 }
 
