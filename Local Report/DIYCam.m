@@ -273,9 +273,15 @@
     if (session != nil && self.isRecording)
     {
         [self setIsRecording:false];
-        [self.assetWriter finishWritingWithCompletionHandler:^{
-           [self writeVideoToFileSystem:self.assetWriter.outputURL]; 
-        }];
+        
+        if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 6.0) {
+            [self.assetWriter finishWritingWithCompletionHandler:^{
+                [self writeVideoToFileSystem:self.assetWriter.outputURL]; 
+            }];
+        } else {
+            [self.assetWriter finishWriting];
+            [self writeVideoToFileSystem:self.assetWriter.outputURL];
+        }
     }
 }
 

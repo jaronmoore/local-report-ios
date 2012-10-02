@@ -355,8 +355,6 @@
         <class className="AudioCallViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AudioCallViewController.h"/>
             <relationships>
-                <relationship kind="action" name="dialButtonPressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="hangupButtonPressed:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="callButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="hangupButoon" candidateClass="UIButton"/>
             </relationships>

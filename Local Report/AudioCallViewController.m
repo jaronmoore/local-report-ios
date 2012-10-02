@@ -43,6 +43,7 @@
     TwilioPhone *phone = appDelegate.phone;
     [phone disconnect];
     [self.callButton setEnabled:YES];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (void)sensorStateChange:(NSNotificationCenter *)notification

@@ -45,6 +45,7 @@
 - (IBAction)cancelButtonPushed:(id)sender 
 {
     [self.request cancel];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (void)uploadFileToServer
