@@ -279,8 +279,12 @@
                 [self writeVideoToFileSystem:self.assetWriter.outputURL]; 
             }];
         } else {
+            dispatch_queue_t writingQueue= dispatch_queue_create("finish writing queue", NULL);
+            dispatch_async(writingQueue,^{
             [self.assetWriter finishWriting];
             [self writeVideoToFileSystem:self.assetWriter.outputURL];
+            });
+            dispatch_release(writingQueue);
         }
     }
 }
