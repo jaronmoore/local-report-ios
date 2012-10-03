@@ -14,8 +14,8 @@
 @property (nonatomic, assign) AVCaptureDeviceInput *videoCameraInput;
 @property (atomic, retain) AVCaptureVideoDataOutput *movieOutput;
 @property (atomic, retain) AVAssetImageGenerator *thumbnailGenerator;
-@property (weak, nonatomic) AVAssetWriter *assetWriter;
-@property (weak, nonatomic) AVAssetWriterInput *videoInput;
+@property (strong, nonatomic) AVAssetWriter *assetWriter;
+@property (strong, nonatomic) AVAssetWriterInput *videoInput;
 @property (atomic, retain) ALAssetsLibrary *library;
 
 @property (atomic, retain) NSOperationQueue *queue;
@@ -528,7 +528,8 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
     [movieFileOutput release]; movieFileOutput = nil;
     [thumbnailGenerator release]; thumbnailGenerator = nil;
     [library release]; library = nil;
-    [queue release]; queue = nil;
+    self.assetWriter = nil;
+    self.videoInput = nil;
 }
 
 - (void)dealloc
