@@ -351,45 +351,6 @@
         <image name="title.png" width="1123" height="181"/>
         <image name="worldmap.png" width="1598" height="1110"/>
     </resources>
-    <classes>
-        <class className="AudioCallViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AudioCallViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="callButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="hangupButoon" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="AudioCaptureViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AudioCaptureViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="statusText" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="stopButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="uploadButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="MainMenuViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainMenuViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="timerLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="VideoCaptureViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/VideoCaptureViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="previewView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="recordButton" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="timerView" candidateClass="UIProgressView"/>
-            </relationships>
-        </class>
-        <class className="VideoUploaderViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/VideoUploaderViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancelButtonPushed:"/>
-                <relationship kind="outlet" name="progressView" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="transferProgress" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
